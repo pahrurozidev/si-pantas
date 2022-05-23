@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+h1,
+.nav-link,
+input,
+textarea {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* navbar */
+.navbar-brand span {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.navbar-nav:hover {
+    margin-top: 1px !important;
+}
+
+.nav-link:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #0D6EFD;
+}
+
+.registration:hover::after {
+    height: 0;
+}
+
+.registration:hover {
+    transform: scale(1.05);
+    transition: all .3s;
+}
+
+/* fitur kami */
+div.feature {
+    display: grid;
+    gap: 20px;
+}
+
+.feature img {
+    width: 300px;
+}
+
+/* bantuan sosial */
+.articles {
+    display: grid;
+    gap: 20px;
+}
+
+.card-body {
+    position: relative;
+}
+
+.btn-main {
+    position: absolute;
+    bottom: 16px;
+}
+
+/* footer */
+.text-decoration-none:hover {
+    text-decoration: underline !important;
+}
+
+
+@media screen and (min-width: 600px) {
+
+    /* fitur kami */
+    div.feature {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature img {
+        width: 200px;
+    }
+
+    /* bantuan sosial */
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-main {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    /* footer */
+    .social-media {
+        width: 400px !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* fitur kami */
+    div.feature {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* bantuan sosial */
+    .articles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    /* navbar */
+    .navbar-nav .nav-item {
+        margin: 5px 0 !important;
+    }
+
+    .navbar-nav:hover {
+        margin-top: 0 !important;
+    }
+
+    .nav-link:hover::after {
+        height: 0;
+        visibility: hidden;
+    }
+
+    .authentication {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0 !important;
+    }
+
+    .list-group.ms-2 {
+        margin: 15px 0 0 !important;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    /* footer */
+    footer .description {
+        flex-direction: column;
+    }
+
+    .social-media {
+        width: 350px !important;
+    }
+
+    .description section {
+        margin-bottom: 20px !important;
+    }
+
+}
