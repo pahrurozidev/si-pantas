@@ -57,19 +57,19 @@
             <h1 class="text-center">Fitur Kami</h1>
             <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quas.</p>
             <div class="row mt-5 p-3 feature">
-                <div class="text-center shadow">
+                <div class="text-center shadow rounded">
                     <img src="{{ asset('img/laporkan.jpg') }}" alt="">
                     <h4>Laporkan</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi placeat consequuntur numquam ab
                         tenetur nesciunt velit adipisci deleniti laborum totam.</p>
                 </div>
-                <div class="text-center shadow">
+                <div class="text-center shadow rounded">
                     <img src="{{ asset('img/tracking.jpg') }}" alt="">
                     <h4>Tracking</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum iste fuga corrupti itaque doloribus
                         quo quis qui delectus consectetur?</p>
                 </div>
-                <div class="text-center shadow">
+                <div class="text-center shadow rounded">
                     <img src="{{ asset('img/selidiki.jpg') }}" alt="">
                     <h4>Selidiki</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos autem corrupti, vero temporibus

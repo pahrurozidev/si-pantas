@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{ asset('img/icon.png') }}" alt="icon" width="50">
                 <span class="ms-1">SIPANTAS</span>
             </a>
@@ -24,14 +24,39 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#tentang">Tentang</a>
                     </li>
-                    <ul class="nav-item d-flex p-0 ms-5 authentication">
-                        <li class="list-group"><a href="#" class="nav-link">Login</a></li>
-                        <li class="list-group ms-2"><a href="#"
-                                class="nav-link text-center bg-primary text-white rounded-pill border registration px-3">Registrasi</a>
-                        </li>
-                    </ul>
+                    @auth
+                        <div class="btn-group username">
+                            <button type="button" class="btn btn-transparent dropdown-toggle ps-0" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Selamat Datang {{ auth()->user()->name }}<div class="btn-group">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-laptop"></i><span
+                                            class="ms-2">Dashboard</span></a></li>
+                                <li>
+                                    <form action="/logout" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item"><i
+                                                class="bi bi-box-arrow-right"></i><span
+                                                class="ms-2">Keluar</span></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            @else
+                <ul class="nav-item d-flex p-0 ms-5 authentication">
+                    <li class="list-group">
+                        <a href="/login" class="nav-link">Login</a>
+                    </li>
+                    <li class="list-group ms-2">
+                        <a href="/register"
+                            class="nav-link text-center bg-primary text-white rounded-pill border registration px-3">Registrasi</a>
+                    </li>
                 </ul>
-            </div>
+            @endauth
+            </ul>
+        </div>
         </div>
     </nav>
 </header>

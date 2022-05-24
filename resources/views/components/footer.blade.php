@@ -32,7 +32,7 @@
                 <li><a href="" class="text-white text-decoration-none">Bantuan Sosial</a></li>
                 <li><a href="" class="text-white text-decoration-none">Tentang Kami</a></li>
                 <li><a href="" class="text-white text-decoration-none">Login</a></li>
-                <li><a href="" class="text-white text-decoration-none">Registerasi</a></li>
+                <li><a href="" class="text-white text-decoration-none">Registrasi</a></li>
             </ul>
         </section>
     </div>

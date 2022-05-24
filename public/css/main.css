@@ -5,8 +5,14 @@
 }
 
 h1,
+h4,
 .nav-link,
+.username,
+.card-title,
+small.d-block,
+button.w-100,
 input,
+label,
 textarea {
     font-family: 'Quicksand', sans-serif;
 }
@@ -17,9 +23,12 @@ textarea {
     letter-spacing: 1px;
 }
 
-
 .navbar-nav:hover {
     margin-top: 1px !important;
+}
+
+.navbar-nav:hover .username {
+    margin-top: -1px !important;
 }
 
 .nav-link:hover::after {
@@ -37,6 +46,10 @@ textarea {
 .registration:hover {
     transform: scale(1.05);
     transition: all .3s;
+}
+
+.navbar-nav .username {
+    margin-left: 48px !important;
 }
 
 /* fitur kami */
@@ -67,6 +80,11 @@ div.feature {
 /* footer */
 .text-decoration-none:hover {
     text-decoration: underline !important;
+}
+
+.social-media .nav-link:hover::after {
+    height: 0;
+    visibility: hidden;
 }
 
 
@@ -129,6 +147,11 @@ div.feature {
     .authentication {
         display: flex;
         flex-direction: column;
+        margin-left: 0 !important;
+    }
+
+    .navbar-nav .username {
+        display: block;
         margin-left: 0 !important;
     }
 
