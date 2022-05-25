@@ -6,11 +6,13 @@
 
 h1,
 h4,
+.navbar-brand,
 .nav-link,
 .username,
 .card-title,
 small.d-block,
 button.w-100,
+div.keluar,
 input,
 label,
 textarea {
@@ -18,8 +20,7 @@ textarea {
 }
 
 /* navbar */
-.navbar-brand span {
-    font-family: 'Quicksand', sans-serif;
+.navbar-brand {
     letter-spacing: 1px;
 }
 
@@ -82,11 +83,37 @@ div.feature {
     text-decoration: underline !important;
 }
 
-.social-media .nav-link:hover::after {
+.social-media .nav-link:hover::after,
+.dashboard .nav-link:hover::after {
     height: 0;
     visibility: hidden;
 }
 
+/* dashboard */
+.navbar.dashboard {
+    background: red;
+    position: relative;
+    z-index: 3 !important;
+}
+
+.nav-item .text-dark:hover {
+    margin-top: -1px !important;
+}
+
+.dashboard nav {
+    position: relative;
+    z-index: 2;
+    margin-top: -60px !important;
+}
+
+.dashboard main {
+    position: relative;
+    z-index: 1;
+}
+
+div.keluar {
+    display: none !important;
+}
 
 @media screen and (min-width: 600px) {
 
@@ -160,7 +187,7 @@ div.feature {
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 767px) {
 
     /* footer */
     footer .description {
@@ -175,4 +202,16 @@ div.feature {
         margin-bottom: 20px !important;
     }
 
+    /* dashboard */
+    .dashboard .keluar {
+        display: none;
+    }
+
+    div.keluar {
+        display: block !important;
+    }
+
+    .dashboard nav {
+        margin: -150px auto 100px !important;
+    }
 }

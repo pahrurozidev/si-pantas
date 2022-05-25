@@ -28,7 +28,7 @@
                         <div class="btn-group username">
                             <button type="button" class="btn btn-transparent dropdown-toggle ps-0" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Selamat Datang {{ auth()->user()->name }}<div class="btn-group">
+                                Selamat Datang {{ auth()->user()->nama }}<div class="btn-group">
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-laptop"></i><span
