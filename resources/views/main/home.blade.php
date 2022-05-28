@@ -18,7 +18,7 @@
                         <img src="{{ asset('img/hero2.jpg') }}" class="d-block w-100" alt="..." height="500"
                             style="object-fit: cover;">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
+                            <h3>Laporkan</h3>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         <img src="{{ asset('img/hero3.jpg') }}" class="d-block w-100" alt="..." height="500"
                             style="object-fit: cover;">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
+                            <h3>Tracking</h3>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                         <img src="{{ asset('img/hero1.jpg') }}" class="d-block w-100" alt="..." height="500"
                             style="object-fit: cover;">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
+                            <h3>Selidiki</h3>
                             <p>Some representative placeholder content for the third slide.</p>
                         </div>
                     </div>
@@ -55,25 +55,22 @@
         {{-- fitur kami --}}
         <section class="container py-5" id="fitur" style="padding-top: 110px !important">
             <h1 class="text-center">Fitur Kami</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quas.</p>
+            <p class="text-center">Berikut merupakan beberapa fitur yang kami sediakan</p>
             <div class="row mt-5 p-3 feature">
                 <div class="text-center shadow rounded">
                     <img src="{{ asset('img/laporkan.jpg') }}" alt="">
                     <h4>Laporkan</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi placeat consequuntur numquam ab
-                        tenetur nesciunt velit adipisci deleniti laborum totam.</p>
+                    <p>Tingkatkan ketepatan bantuan sosial bagi penerima dengan melaporkan setiap penyaluran bantuan sosial yang dilakukan.</p>
                 </div>
                 <div class="text-center shadow rounded">
                     <img src="{{ asset('img/tracking.jpg') }}" alt="">
                     <h4>Tracking</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum iste fuga corrupti itaque doloribus
-                        quo quis qui delectus consectetur?</p>
+                    <p>Tingkatkan Transparansi dan Integritas dengan memantau setiap proses penyaluram Bantuan Sosial</p>
                 </div>
                 <div class="text-center shadow rounded">
                     <img src="{{ asset('img/selidiki.jpg') }}" alt="">
                     <h4>Selidiki</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos autem corrupti, vero temporibus
-                        animi cupiditate reprehenderit enim tenetur reiciendis.</p>
+                    <p>Berantas tindak penyelewengan bantuan sosial dengan melakukan penyelidikan terhadap proses penyaluran bantuan soial.</p>
                 </div>
             </div>
         </section>
@@ -81,7 +78,7 @@
         {{-- bantuan sosial terbaru --}}
         <section class="container" id="informasi" style="padding-top: 110px !important">
             <h1 class="text-center">Bantuan Sosial Terbaru</h1>
-            <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, voluptates!</p>
+            <p class="text-center">Informasi terbaru mengenai bantuan sosial di Indonesia</p>
             <div class="articles mt-5">
                 <div class="card shadow card-main">
                     <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="..." height="263"
@@ -172,7 +169,7 @@
         <section class="container px-5 pb-5 shadow" id="tentang"
             style="padding-top: 100px !important; margin-top: 100px !important">
             <h1 class="text-center">Tentang Kami</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sapiente!</p>
+            <p class="text-center">Silahkan lengkapi data dibawah jika ingin mengenal tentang kami</p>
             <form method="" class="mt-5">
                 <div class="d-flex mb-3">
                     <input type="text" class="form-control me-2" id="nama" placeholder="Nama">
