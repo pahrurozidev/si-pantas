@@ -87,84 +87,25 @@
                     <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="..." height="263"
                         style="object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius reiciendis
-                            aperiam, ea cumque sapiente ab voluptates soluta mollitia perspiciatis nesciunt voluptate
-                            dolorum
-                            aut quam quis laborum optio nulla animi voluptatibus delectus.</p>
+                        <h5 class="card-title">{{ $informasi[0]->judul_informasi }}</h5>
+                        <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
+                            {{ $informasi[0]->created_at->diffForHumans() }}</small>
+                        <p class="card-text">{{ substr($informasi[0]->deskripsi, 0, 300) }}</p>
                         <a href="#" class="btn btn-primary btn-main">Lihat selengkapnya</a>
                     </div>
                 </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+                @foreach ($informasi->skip(1) as $info)
+                    <div class="card shadow">
+                        <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $info->judul_informasi }}</h5>
+                            <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
+                                {{ $info->created_at->diffForHumans() }}</small>
+                            <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}</p>
+                            <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+                        </div>
                     </div>
-                </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-                    </div>
-                </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-                    </div>
-                </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-                    </div>
-                </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-                    </div>
-                </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-                    </div>
-                </div>
-                <div class="card shadow">
-                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
 

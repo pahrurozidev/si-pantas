@@ -20,7 +20,9 @@
                             value="{{ old('nama') }}" placeholder="nama">
                         <label for="nama">Nama</label>
                         @error('nama')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -28,7 +30,9 @@
                             value="{{ old('nik') }}" placeholder="nik">
                         <label for="nik">NIK</label>
                         @error('nik')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -36,7 +40,9 @@
                             id="telepon" value="{{ old('telepon') }}" placeholder="telepon">
                         <label for="telepon">Nomor Telepon</label>
                         @error('telepon')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -44,7 +50,9 @@
                             id="email" value="{{ old('email') }}" placeholder="email">
                         <label for="email">Email</label>
                         @error('email')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -52,7 +60,9 @@
                             id="tgl_lahir" value="{{ old('tgl_lahir') }}" placeholder="tgl_lahir">
                         <label for="tgl_lahir">Tanggal Lahir</label>
                         @error('tgl_lahir')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -61,7 +71,9 @@
                             placeholder="username">
                         <label for="username">Username</label>
                         @error('username')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -69,7 +81,9 @@
                             id="password" placeholder="Password" placeholder="password">
                         <label for="password">Password</label>
                         @error('password')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div class="form-floating mb-4">
@@ -78,7 +92,9 @@
                             placeholder="konfirmasi_password" placeholder="konfirmasi_password">
                         <label for="konfirmasi_password">Konfirmasi Password</label>
                         @error('konfirmasi_password')
-                            {{ $message }}
+                            <div class="invalid-feeback">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Registrasi</button>
