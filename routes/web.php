@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardInfoController;
+use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\WilayahController;
 use App\Models\Informasi;
 use Illuminate\Support\Facades\Route;
 
@@ -28,5 +28,7 @@ Route::post("/logout", [LoginController::class, "logout"]);
 
 Route::get("/register", [RegisterController::class, "index"])->middleware("guest");
 Route::post("/register", [RegisterController::class, "store"]);
+
+Route::get("/informasi/{informasi:slug}", [InformasiController::class, "show"]);
 
 Route::resource("/dashboard/informasi", DashboardInfoController::class)->middleware("auth");

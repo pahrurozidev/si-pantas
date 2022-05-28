@@ -91,7 +91,8 @@
                         <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
                             {{ $informasi[0]->created_at->diffForHumans() }}</small>
                         <p class="card-text">{{ substr($informasi[0]->deskripsi, 0, 300) }}</p>
-                        <a href="#" class="btn btn-primary btn-main">Lihat selengkapnya</a>
+                        <a href="/informasi/{{ $informasi[0]->slug }}" class="btn btn-primary btn-main">Lihat
+                            selengkapnya</a>
                     </div>
                 </div>
                 @foreach ($informasi->skip(1) as $info)
@@ -102,7 +103,7 @@
                             <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
                                 {{ $info->created_at->diffForHumans() }}</small>
                             <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}</p>
-                            <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+                            <a href="/informasi/{{ $info->slug }}" class="btn btn-primary">Lihat selengkapnya</a>
                         </div>
                     </div>
                 @endforeach
