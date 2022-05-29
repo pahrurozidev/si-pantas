@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardInfoController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\LoginController;
@@ -31,4 +32,6 @@ Route::post("/register", [RegisterController::class, "store"]);
 
 Route::get("/informasi/{informasi:slug}", [InformasiController::class, "show"]);
 
-Route::resource("/dashboard/informasi", DashboardInfoController::class)->middleware("auth");
+Route::get("/dashboard", [DashboardController::class, 'index'])->middleware("auth");
+
+Route::resource("/dashboard/informasi", DashboardInfoController::class)->middleware("admin");

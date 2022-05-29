@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->boolean('is_admin')->default(false);
+            $table->boolean('desa')->default(false);
+            $table->boolean('warga')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
@@ -36,6 +38,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('is_admin');
+        });
     }
 };
