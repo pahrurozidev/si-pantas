@@ -34,4 +34,11 @@ Route::get("/informasi/{informasi:slug}", [InformasiController::class, "show"]);
 
 Route::get("/dashboard", [DashboardController::class, 'index'])->middleware("auth");
 
+Route::get("/dashboard/warga/laporan", [DashboardController::class, 'create'])->middleware("warga");
+Route::post("/dashboard/warga/laporan", [DashboardController::class, 'store'])->middleware("warga");
+
+Route::get("/dashboard/admin/laporan", [DashboardController::class, 'show'])->middleware("admin");
+Route::get("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::class, 'detail'])->middleware("admin");
+Route::delete("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::class, 'destroy'])->middleware("admin");
+
 Route::resource("/dashboard/informasi", DashboardInfoController::class)->middleware("admin");

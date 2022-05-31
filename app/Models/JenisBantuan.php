@@ -13,4 +13,9 @@ class JenisBantuan extends Model
     {
         $this->belongsTo(Informasi::class);
     }
+
+    public function users()
+    {
+        $this->hasMany(User::class);;
+    }
 }

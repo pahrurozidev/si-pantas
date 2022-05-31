@@ -122,7 +122,9 @@ div.keluar {
     text-decoration: none !important;
 }
 
-.edit:hover {
+.edit:hover,
+.detail:hover,
+.hapus:hover {
     color: white;
 }
 

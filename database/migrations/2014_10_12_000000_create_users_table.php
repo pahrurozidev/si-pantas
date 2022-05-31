@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('jenis_bantuan')->unique()->nullable();
             $table->string('nama');
             $table->string('nik')->unique();
             $table->string('telepon')->unique();
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->date('tgl_lahir');
             $table->string('username')->unique();
             $table->string('password');
+            $table->string('jmlh_bantuan')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->boolean('is_admin')->default(false);
             $table->boolean('desa')->default(false);

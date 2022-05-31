@@ -138,6 +138,6 @@ class DashboardInfoController extends Controller
     public function destroy(Informasi $informasi)
     {
         Informasi::destroy($informasi->id);
-        return redirect("/dashboard/informasi")->with("success", "Bantuan berhasil dihapus");
+        return redirect("/dashboard/informasi")->with("successDestroy", "Bantuan berhasil dihapus");
     }
 }

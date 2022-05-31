@@ -65,6 +65,10 @@
             {{-- warga --}}
             @can('warga')
                 <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/warga/laporan">
+                        <i class="bi bi-flag"></i> <span class="ms-1">Laporan</span> </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-wallet2"></i> <span class="ms-1">Bantuan</span> </a>
                 </li>
@@ -72,10 +76,6 @@
 
             {{-- warga & desa --}}
             @cannot('admin')
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="bi bi-flag"></i> <span class="ms-1">Laporan</span> </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-clock-history"></i> <span class="ms-1">History</span> </a>
@@ -104,7 +104,7 @@
             </h6>
             <ul class="nav flex-column mb-2">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/dashboard/admin/laporan">
                         <i class="bi bi-flag"></i> <span class="ms-1">Semua Laporan</span> </a>
                 </li>
                 <li class="nav-item">
