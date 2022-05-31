@@ -317,3 +317,35 @@ trix-toolbar [data-trix-button-group="file-tools"] {
         margin: -150px auto 100px !important;
     }
 }
+
+.input-style-1 {
+    position: relative;
+    margin-bottom: 30px;
+}
+.input-style-1 label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #262d3f;
+    display: block;
+    margin-bottom: 10px;
+}
+.input-style-1 input,
+.input-style-1 textarea {
+    width: 100%;
+    background: rgba(239, 239, 239, 0.5);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 16px;
+    color: #5d657b;
+    resize: none;
+}
+.input-style-1 input:focus,
+.input-style-1 textarea:focus {
+    border-color: #2f80ed;
+}
+.input-style-1 input[type="date"],
+.input-style-1 input[type="time"],
+.input-style-1 textarea[type="date"],
+.input-style-1 textarea[type="time"] {
+    background: transparent;
+}

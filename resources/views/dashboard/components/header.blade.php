@@ -25,9 +25,9 @@
                 </a>
             </div>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="bi bi-person"></i> <span class="ms-1">Profile</span> </a>
-            </li>
+                    <a class="nav-link" href="/dashboard/profile">
+                        <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
+                </li>
 
             {{-- label role --}}
             @can('admin')
@@ -88,6 +88,7 @@
                     <a class="nav-link" href="/dashboard/informasi">
                         <i class="bi bi-clipboard-data"></i> <span class="ms-1">Informasi</span> </a>
                 </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-person-lines-fill text-secondary"></i> <span class="ms-1">Data

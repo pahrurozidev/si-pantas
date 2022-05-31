@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardInfoController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Models\Informasi;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", fn () => view("main.home", [
     "informasi" => Informasi::latest()->get()
 ]));
+
 
 Route::get("/login", [LoginController::class, "index"])->name("login")->middleware("guest");
 Route::post("/login", [LoginController::class, "authenticate"]);
@@ -42,3 +44,5 @@ Route::get("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::clas
 Route::delete("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::class, 'destroy'])->middleware("admin");
 
 Route::resource("/dashboard/informasi", DashboardInfoController::class)->middleware("admin");
+
+Route::get("/dashboard/profile", [ProfileController::class, 'index'])->middleware("auth");
