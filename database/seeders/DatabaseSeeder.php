@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\History;
 use App\Models\Informasi;
 use App\Models\JenisBantuan;
 use App\Models\User;
@@ -17,9 +18,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(3)->create();
+        User::factory(3)->create();
 
         Informasi::factory(3)->create();
+
+        History::factory(3)->create();
 
         // User::factory()->create([
         //     "nama" => "Pahrurozi",

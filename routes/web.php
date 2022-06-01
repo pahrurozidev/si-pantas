@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardInfoController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
@@ -46,3 +47,5 @@ Route::delete("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::c
 Route::resource("/dashboard/informasi", DashboardInfoController::class)->middleware("admin");
 
 Route::get("/dashboard/profile", [ProfileController::class, 'index'])->middleware("auth");
+
+Route::get("/dashboard/history", [HistoryController::class, 'index'])->middleware("auth");
