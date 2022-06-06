@@ -6,10 +6,11 @@
     </button>
     <div class="navbar-nav border-start">
         <div class="nav-item text-nowrap">
-            <a class="nav-link px-3 text-dark keluar" href="#">
-                <span class="d-inline-block">
-                    <i class="bi bi-box-arrow-right"></i>
-                </span> Keluar</a>
+            <form action="/logout" method="POST" class="d-inline-block nav-link px-3 text-dark">
+                @csrf
+                <button type="submit" class="dropdown-item keluar"><i class="bi bi-box-arrow-right"></i><span
+                        class="ms-2">Keluar</span></button>
+            </form>
         </div>
     </div>
 </header>
@@ -25,9 +26,9 @@
                 </a>
             </div>
             <li class="nav-item">
-                    <a class="nav-link" href="/dashboard/profile">
-                        <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
-                </li>
+                <a class="nav-link" href="/dashboard/profile">
+                    <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
+            </li>
 
             {{-- label role --}}
             @can('admin')
@@ -56,9 +57,9 @@
             {{-- desa --}}
             @can('desa')
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="bi bi-person-lines-fill text-secondary"></i> <span class="ms-1">Data
-                            Warga</span> </a>
+                    <a class="nav-link" href="/dashboard/desa/penerima">
+                        <i class="bi bi-person-check text-secondary"></i> <span class="ms-1">Data
+                            Penerima</span> </a>
                 </li>
             @endcan
 
@@ -69,7 +70,7 @@
                         <i class="bi bi-flag"></i> <span class="ms-1">Laporan</span> </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/dashboard/warga/bantuan">
                         <i class="bi bi-wallet2"></i> <span class="ms-1">Bantuan</span> </a>
                 </li>
             @endcan
@@ -85,14 +86,18 @@
             {{-- admin --}}
             @can('admin')
                 <li class="nav-item">
-                    <a class="nav-link" href="/dashboard/informasi">
+                    <a class="nav-link" href="/dashboard/admin/informasi">
                         <i class="bi bi-clipboard-data"></i> <span class="ms-1">Informasi</span> </a>
                 </li>
-               
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-person-lines-fill text-secondary"></i> <span class="ms-1">Data
                             Warga</span> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/admin/penerima">
+                        <i class="bi bi-person-check text-secondary"></i> <span class="ms-1">Data
+                            Penerima</span> </a>
                 </li>
             @endcan
         </ul>
@@ -115,7 +120,11 @@
             </ul>
         @endcan
         <div class="d-flex align-items-center px-3 mt-4 mb-1 keluar">
-            <i class="bi bi-box-arrow-right"></i><span class="ms-2">Keluar</span>
+            <form action="/logout" method="POST" class="d-inline-block nav-link px-3 text-dark">
+                @csrf
+                <button type="submit" class="dropdown-item keluar"><i class="bi bi-box-arrow-right"></i><span
+                        class="ms-2">Keluar</span></button>
+            </form>
         </div>
     </div>
 </nav>

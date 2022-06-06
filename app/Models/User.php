@@ -41,6 +41,11 @@ class User extends Authenticatable
 
     public function jenisBantuan()
     {
-        $this->belongsTo(JenisBantuan::class);
+        return $this->belongsTo(JenisBantuan::class);
+    }
+
+    public function penerima()
+    {
+        return $this->hasMany(Penerima::class);
     }
 }

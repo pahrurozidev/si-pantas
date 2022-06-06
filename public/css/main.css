@@ -118,6 +118,10 @@ div.keluar {
     display: none !important;
 }
 
+.keluar:hover {
+    background: #F8F9FA !important;
+}
+
 .beranda:hover {
     text-decoration: none !important;
 }
@@ -322,6 +326,7 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     position: relative;
     margin-bottom: 30px;
 }
+
 .input-style-1 label {
     font-size: 14px;
     font-weight: 500;
@@ -329,6 +334,7 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     display: block;
     margin-bottom: 10px;
 }
+
 .input-style-1 input,
 .input-style-1 textarea {
     width: 100%;
@@ -339,10 +345,12 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     color: #5d657b;
     resize: none;
 }
+
 .input-style-1 input:focus,
 .input-style-1 textarea:focus {
     border-color: #2f80ed;
 }
+
 .input-style-1 input[type="date"],
 .input-style-1 input[type="time"],
 .input-style-1 textarea[type="date"],

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JenisBantuan;
 use App\Models\Laporan;
+use App\Models\Penerima;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,34 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard.index');
+    }
+
+    public function bantuan()
+    {
+        $penerima = Penerima::where('nik', auth()->user()->nik)->get();
+        return view('dashboard.warga.bantuan', [
+            'penerima' => $penerima
+        ]);
+    }
+
+    public function updateBantuanRoleDesa(Request $request, Penerima $penerima)
+    {
+        $validatedData = $request->validate([
+            'status_desa' => 'required'
+        ]);
+
+        Penerima::where('id', $penerima->id)->update($validatedData);
+        return redirect("/dashboard/desa/penerima")->with("successUpdate", "Berhasil terverifikasi");
+    }
+
+    public function updateBantuanRoleWarga(Request $request, Penerima $penerima)
+    {
+        $validatedData = $request->validate([
+            'status_warga' => 'required'
+        ]);
+
+        Penerima::where('id', $penerima->id)->update($validatedData);
+        return redirect("/dashboard/warga/bantuan")->with("successUpdate", "Berhasil terverifikasi");
     }
 
     public function create()
@@ -52,7 +81,7 @@ class DashboardController extends Controller
 
     public function detail(Laporan $laporan)
     {
-        return view("dashboard.admin.detail", [
+        return view("dashboard.admin.detailLaporan", [
             "laporan" => $laporan
         ]);
     }
@@ -61,5 +90,40 @@ class DashboardController extends Controller
     {
         Laporan::destroy($laporan->id);
         return redirect("/dashboard/admin/laporan")->with("successDestroy", "Laporan berhasil dihapus");
+    }
+
+    public function penerimaRoleAdmin()
+    {
+        return view("dashboard.admin.penerima", [
+            "dataPenerima" => Penerima::all()
+        ]);
+    }
+
+    public function penerimaRoleAdminDetail(Penerima $penerima)
+    {
+        return view("dashboard.admin.detailPenerima", [
+            "penerima" => $penerima
+        ]);
+    }
+
+    public function penerimaRoleDesa()
+    {
+        return view("dashboard.desa.penerima", [
+            "dataPenerima" => Penerima::all()
+        ]);
+    }
+
+    public function penerimaRoleDesaDetail(Penerima $penerima)
+    {
+        return view("dashboard.desa.detailPenerima", [
+            "penerima" => $penerima
+        ]);
+    }
+
+    public function detailBantuan(Penerima $penerima)
+    {
+        return view("dashboard.warga.detailBantuan", [
+            "penerima" => $penerima
+        ]);
     }
 }

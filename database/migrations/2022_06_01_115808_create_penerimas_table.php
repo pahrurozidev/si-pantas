@@ -13,23 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('penerimas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('jenis_bantuan')->unique()->nullable();
-            $table->foreignId('penerima_bantuan')->unique()->nullable();
+            $table->string('status_desa')->nullable();
+            $table->string('status_warga')->nullable();
             $table->string('nama');
             $table->string('nik')->unique();
             $table->string('telepon')->unique();
             $table->string('email')->unique();
+            $table->string('tempat_lahir');
             $table->date('tgl_lahir');
-            $table->string('username')->unique();
-            $table->string('password');
             $table->string('jmlh_bantuan')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->boolean('is_admin')->default(false);
-            $table->boolean('desa')->default(false);
-            $table->boolean('warga')->default(true);
-            $table->rememberToken();
+            $table->string('jenis_bantuan');
+            $table->string("provinsi");
+            $table->string("kabupaten");
+            $table->string("kecamatan");
+            $table->string("desa");
             $table->timestamps();
         });
     }
@@ -41,8 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('is_admin');
-        });
+        Schema::dropIfExists('penerimas');
     }
 };

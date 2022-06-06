@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Informasi;
 use App\Models\JenisBantuan;
+use App\Models\Penerima;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -20,6 +21,36 @@ class DatabaseSeeder extends Seeder
         // User::factory(3)->create();
 
         Informasi::factory(3)->create();
+
+        Penerima::create([
+            'nama' => 'muhammad zakaria',
+            'nik' => '9209480233434480',
+            'telepon' => '920948023480',
+            'email' => 'zakaria@gmail.com',
+            'tgl_lahir' => 20001212,
+            'tempat_lahir' => 'Bagek gaet',
+            'jmlh_bantuan' => 1200000,
+            'jenis_bantuan' => 'Penerima Bantuan Ha (PKH)',
+            'provinsi' => 'Nusa Tenggara Barat',
+            'kabupaten' => 'Lombok Timur',
+            'kecamatan' => 'Pringgabaya',
+            'desa' => 'Pohgading Timur',
+        ]);
+
+        Penerima::create([
+            'nama' => 'Pahrurozi',
+            'nik' => '232380928093',
+            'telepon' => '085338043144',
+            'email' => 'pahrurozi17@gmail.com',
+            'tgl_lahir' => 20000701,
+            'tempat_lahir' => 'Bagek gaet',
+            'jmlh_bantuan' => 10000000,
+            'jenis_bantuan' => 'Penerima Bantuan Ha (PKH)',
+            'provinsi' => 'Nusa Tenggara Barat',
+            'kabupaten' => 'Lombok Timur',
+            'kecamatan' => 'Pringgabaya',
+            'desa' => 'Pohgading Timur',
+        ]);
 
         // User::factory()->create([
         //     "nama" => "Pahrurozi",

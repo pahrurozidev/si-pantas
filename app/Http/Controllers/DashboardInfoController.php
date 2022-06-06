@@ -64,7 +64,7 @@ class DashboardInfoController extends Controller
         $validatedData["slug"] = strtoupper(substr(md5(time()), 0, 5));
 
         Informasi::create($validatedData);
-        return redirect("/dashboard/informasi")->with("success", "Bantuan berhasil ditambahkan");
+        return redirect("/dashboard/admin/informasi")->with("success", "Bantuan berhasil ditambahkan");
     }
 
     /**
@@ -126,7 +126,7 @@ class DashboardInfoController extends Controller
         $validatedData["slug"] = $informasi->slug;
 
         Informasi::where("id", $informasi->id)->update($validatedData);
-        return redirect("/dashboard/informasi")->with("successUpdate", "Bantuan berhasil diperbaharui");
+        return redirect("/dashboard/admin/informasi")->with("successUpdate", "Bantuan berhasil diperbaharui");
     }
 
     /**
@@ -138,6 +138,6 @@ class DashboardInfoController extends Controller
     public function destroy(Informasi $informasi)
     {
         Informasi::destroy($informasi->id);
-        return redirect("/dashboard/informasi")->with("successDestroy", "Bantuan berhasil dihapus");
+        return redirect("/dashboard/admin/informasi")->with("successDestroy", "Bantuan berhasil dihapus");
     }
 }
