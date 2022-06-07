@@ -44,6 +44,8 @@ Route::get("/dashboard/warga/detail/{penerima:id}", [DashboardController::class,
 Route::put("/dashboard/warga/bantuan/{penerima:id}", [DashboardController::class, 'updateBantuanRoleWarga'])->middleware("warga");
 Route::get("/dashboard/warga/laporan", [DashboardController::class, 'create'])->middleware("warga");
 Route::post("/dashboard/warga/laporan", [DashboardController::class, 'store'])->middleware("warga");
+Route::get("/dashboard/warga/history", [DashboardController::class, 'history'])->middleware("warga");
+Route::get("/dashboard/warga/detail/{penerima:id}", [DashboardController::class, 'detailHistory'])->middleware("warga");
 
 // admin
 Route::get("/dashboard/admin/laporan", [DashboardController::class, 'show'])->middleware("admin");
@@ -57,6 +59,8 @@ Route::resource("/dashboard/admin/informasi", DashboardInfoController::class)->m
 Route::get("/dashboard/desa/penerima", [DashboardController::class, 'penerimaRoleDesa'])->middleware("desa");
 Route::put("/dashboard/desa/penerima/{penerima:id}", [DashboardController::class, 'updateBantuanRoleDesa'])->middleware("desa");
 Route::get("/dashboard/desa/penerima/detail/{penerima:id}", [DashboardController::class, 'penerimaRoleDesaDetail'])->middleware("desa");
+Route::get("/dashboard/desa/history", [DashboardController::class, 'historyRoleDesa'])->middleware("desa");
+Route::get("/dashboard/desa/history/detail/{penerima:id}", [DashboardController::class, 'detailHistoryRoleDesa'])->middleware("desa");
 
 // desa, warga, admin
 Route::get("/dashboard/profile", [ProfileController::class, 'index'])->middleware("auth");
