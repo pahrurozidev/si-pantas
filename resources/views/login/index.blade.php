@@ -22,7 +22,7 @@
                 <form action="/login" method="POST" class="shadow rounded p-5">
                     @csrf
                     <h1 class="h3 fw-normal text-center">Silakan Masuk</h1>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p class="text-center">Silakan gunakan akun anda untuk memantau dana bantuan sosial</p>
                     <div class="form-floating mt-5 mb-4">
                         <input type="email" name="email" class="form-control" id="floatingInput"
                             placeholder="name@example.com" value="{{ old('email') }}">

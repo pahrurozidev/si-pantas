@@ -22,30 +22,35 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <table class="table-bordered mt-3">
-                    <thead class="bg-secondary text-white">
-                        <tr>
-                            <th scope="col" class="text-center p-2">No</th>
-                            <th scope="col" class="text-center">Judul</th>
-                            <th scope="col" class="text-center">Penulis</th>
-                            <th scope="col" class="text-center">Tanggal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($informasi as $info)
+                @if (count($informasi) === 0)
+                    <h5 class="text-muted mt-4">Informasi bantuan belum ada!</h5>
+                @else
+                    <table class="table-bordered mt-3">
+                        <thead class="bg-secondary text-white">
                             <tr>
-                                <td scope="row" class="text-center">{{ $loop->iteration }}</td>
-                                <td class="p-2 col-lg-9">
-                                    {{ $info->judul_informasi }}
-                                    <a href="/dashboard/informasi/{{ $info->slug }}" class="ms-1 badge bg-primary edit">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </a>
-                                </td>
-                                <td class="p-2 text-center">Administrator</td>
-                                <td class="p-2 text-center">{{ substr($info->created_at, 0, 10) }}</td>
+                                <th scope="col" class="text-center p-2">No</th>
+                                <th scope="col" class="text-center">Judul</th>
+                                <th scope="col" class="text-center">Penulis</th>
+                                <th scope="col" class="text-center">Tanggal</th>
                             </tr>
-                        @endforeach
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($informasi as $info)
+                                <tr>
+                                    <td scope="row" class="text-center">{{ $loop->iteration }}</td>
+                                    <td class="p-2 col-lg-9">
+                                        {{ $info->judul_informasi }}
+                                        <a href="/dashboard/informasi/{{ $info->slug }}"
+                                            class="ms-1 badge bg-primary edit">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                    </td>
+                                    <td class="p-2 text-center">Administrator</td>
+                                    <td class="p-2 text-center">{{ substr($info->created_at, 0, 10) }}</td>
+                                </tr>
+                            @endforeach
+                    </table>
+                @endif
             </div>
         </div>
     </main>

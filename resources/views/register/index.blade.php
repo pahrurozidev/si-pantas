@@ -14,7 +14,7 @@
                 <form action="/register" method="POST" class="shadow rounded p-5">
                     @csrf
                     <h1 class="h3 fw-normal text-center">Registrasi Sekarang</h1>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veniam!</p>
+                    <p class="text-center">Registrasi sekarang juga guna memantau bantuan sosial yang tersalurkan</p>
                     <div class="form-floating mt-5 mb-4">
                         <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama"
                             value="{{ old('nama') }}" placeholder="nama">

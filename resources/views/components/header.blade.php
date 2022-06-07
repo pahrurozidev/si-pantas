@@ -12,7 +12,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    @if (!Request('informasi'))
+                    @if (Request::is('/'))
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#beranda">Beranda</a>
                         </li>
@@ -33,7 +33,7 @@
                                 Selamat Datang {{ auth()->user()->nama }}<div class="btn-group">
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-laptop"></i><span
+                                <li><a class="dropdown-item" href="/dashboard/profile"><i class="bi bi-laptop"></i><span
                                             class="ms-2">Dashboard</span></a>
                                 </li>
                                 <li>

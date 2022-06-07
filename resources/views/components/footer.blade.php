@@ -39,7 +39,7 @@
     {{-- news letter --}}
     <div class="container pb-5">
         <h1 class="text-center">News Letter</h1>
-        <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, optio.</p>
+        <p class="text-center">Dapatkan informasi terbaru dengan melakukan subscribe pada layanan kami</p>
         <div class="col-lg-6 m-auto">
             <form action="" class="d-flex flex-column">
                 <div class="mb-3">

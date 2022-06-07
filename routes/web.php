@@ -35,9 +35,6 @@ Route::post("/logout", [LoginController::class, "logout"]);
 Route::get("/register", [RegisterController::class, "index"])->middleware("guest");
 Route::post("/register", [RegisterController::class, "store"]);
 
-// dashboard
-Route::get("/dashboard", [DashboardController::class, 'index'])->middleware("auth");
-
 // warga
 Route::get("/dashboard/warga/bantuan", [DashboardController::class, 'bantuan'])->middleware("warga");
 Route::get("/dashboard/warga/detail/{penerima:id}", [DashboardController::class, 'detailBantuan'])->middleware("warga");

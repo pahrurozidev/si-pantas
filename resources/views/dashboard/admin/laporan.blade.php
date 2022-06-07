@@ -23,22 +23,27 @@
                 </div>
             @endif
             <div>
-                @foreach ($semuaLaporan as $laporan)
-                    <div class="d-flex align-items-center justify-content-between border rounded p-3 mb-2">
-                        <h3 class="h5">{{ $laporan->nama }}</h3>
-                        <div class="d-flex">
-                            <a href="/dashboard/admin/laporan/{{ $laporan->slug }}" class="badge bg-primary detail"><i
-                                    class="bi bi-eye h6"></i></a>
-                            <form action="/dashboard/admin/laporan/{{ $laporan->slug }}" method="post"
-                                class="ms-2">
-                                @method('delete')
-                                @csrf
-                                <button class="badge bg-danger border-0" onclick="return confirm('Apakah anda yakin?')"><i
-                                        class="bi bi-trash h6"></i></button>
-                            </form>
+                @if (count($semuaLaporan) === 0)
+                    <h5 class="text-muted">Laporan tidak anda!</h5>
+                @else
+                    @foreach ($semuaLaporan as $laporan)
+                        <div class="d-flex align-items-center justify-content-between border rounded p-3 mb-2">
+                            <h3 class="h5">{{ $laporan->nama }}</h3>
+                            <div class="d-flex">
+                                <a href="/dashboard/admin/laporan/{{ $laporan->slug }}" class="badge bg-primary detail"><i
+                                        class="bi bi-eye h6"></i></a>
+                                <form action="/dashboard/admin/laporan/{{ $laporan->slug }}" method="post"
+                                    class="ms-2">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="badge bg-danger border-0"
+                                        onclick="return confirm('Apakah anda yakin?')"><i
+                                            class="bi bi-trash h6"></i></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @endif
             </div>
         </div>
     </main>

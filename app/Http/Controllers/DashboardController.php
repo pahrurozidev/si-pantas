@@ -56,17 +56,22 @@ class DashboardController extends Controller
             "question3" => "required"
         ]);
 
-        $validatedData["slug"] = strtoupper(substr(md5(time()), 0, 5));
-        $validatedData["jenis_bantuan"] = JenisBantuan::where('id', auth()->user()->jenis_bantuan)->get()[0]->nama_bantuan;
-        $validatedData["jmlh_bantuan"] = auth()->user()->jmlh_bantuan;
+        $JenisBantuan = JenisBantuan::where('id', auth()->user()->jenis_bantuan)->get();
+        if (count($JenisBantuan) === 0) {
+            $validatedData["jenis_bantuan"] = null;
+        } else {
+            $validatedData["jenis_bantuan"] = JenisBantuan::where('id', auth()->user()->jenis_bantuan)->get()[0]->nama_bantuan;
+        }
 
+        $validatedData["slug"] = strtoupper(substr(md5(time()), 0, 5));
+        $validatedData["jmlh_bantuan"] = auth()->user()->jmlh_bantuan;
+        $validatedData["deskripsi"] = $request->deskripsi;
         $validatedData["nama"] = auth()->user()->nama;
         $validatedData["nik"] = auth()->user()->nik;
         $validatedData["telepon"] = auth()->user()->telepon;
         $validatedData["email"] = auth()->user()->email;
         $validatedData["tgl_lahir"] = auth()->user()->tgl_lahir;
         $validatedData["username"] = auth()->user()->username;
-        $validatedData["deskripsi"] = $request->deskripsi;
 
         Laporan::create($validatedData);
         return redirect("/dashboard/warga/laporan")->with("success", "Laporan berhasil dikirim dan akan diproses");
