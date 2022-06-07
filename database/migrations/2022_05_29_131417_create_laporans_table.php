@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('question1');
             $table->string('question2');
             $table->string('question3');
-            $table->string('jenis_bantuan');
+            $table->string('jenis_bantuan')->nullable();
             $table->string('jmlh_bantuan')->nullable();
             $table->string('deskripsi');
             $table->string('nama');

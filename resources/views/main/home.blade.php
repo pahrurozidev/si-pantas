@@ -55,25 +55,24 @@
         {{-- fitur kami --}}
         <section class="container py-5" id="fitur" style="padding-top: 110px !important">
             <h1 class="text-center">Fitur Kami</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quas.</p>
+            <p class="text-center">Tingkatkan kemudahan dalam penyaluran bantuan sosial dengan fitur kami</p>
             <div class="row mt-5 p-3 feature">
                 <div class="text-center shadow rounded">
                     <img src="{{ asset('img/laporkan.jpg') }}" alt="">
                     <h4>Laporkan</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi placeat consequuntur numquam ab
-                        tenetur nesciunt velit adipisci deleniti laborum totam.</p>
+                    <p>Tingkatkan ketepatan bantuan sosial bagi penerima dengan melaporkan setiap penyaluran bantuan sosial
+                        yang dilakukan</p>
                 </div>
                 <div class="text-center shadow rounded">
                     <img src="{{ asset('img/tracking.jpg') }}" alt="">
                     <h4>Tracking</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum iste fuga corrupti itaque doloribus
-                        quo quis qui delectus consectetur?</p>
+                    <p>Tingkatkan transparansi dan integritas dengan memantau setiap proses penyaluran bantuan sosial</p>
                 </div>
                 <div class="text-center shadow rounded">
                     <img src="{{ asset('img/selidiki.jpg') }}" alt="">
                     <h4>Selidiki</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos autem corrupti, vero temporibus
-                        animi cupiditate reprehenderit enim tenetur reiciendis.</p>
+                    <p>Berantas tindak penyelewengan bantuan sosial dengan melakukan penyelidikan terhadap proses penyaluran
+                        bantuan sosial</p>
                 </div>
             </div>
         </section>
@@ -81,40 +80,46 @@
         {{-- bantuan sosial terbaru --}}
         <section class="container" id="informasi" style="padding-top: 110px !important">
             <h1 class="text-center">Bantuan Sosial Terbaru</h1>
-            <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, voluptates!</p>
-            <div class="articles mt-5">
-                <div class="card shadow card-main">
-                    <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="..." height="263"
-                        style="object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $informasi[0]->judul_informasi }}</h5>
-                        <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
-                            {{ $informasi[0]->created_at->diffForHumans() }}</small>
-                        <p class="card-text">{{ substr($informasi[0]->deskripsi, 0, 300) }}</p>
-                        <a href="/informasi/{{ $informasi[0]->slug }}" class="btn btn-primary btn-main">Lihat
-                            selengkapnya</a>
-                    </div>
-                </div>
-                @foreach ($informasi->skip(1) as $info)
-                    <div class="card shadow">
-                        <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top" alt="...">
+            <p class="text-center col-lg-8 m-auto">Dapatkan seputar informasi bantuan sosial terkini untuk memastikan
+                tingkat
+                transparansi dan integritas dengan memantau setiap proses penyaluran bantuan sosial</p>
+            @if (count($informasi) === 0)
+                <h5 class="text-muted text-center mt-5">Informasi bantuan belum ada!</h5>
+            @else
+                <div class="articles mt-5">
+                    <div class="card shadow card-main">
+                        <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="..." height="263"
+                            style="object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $info->judul_informasi }}</h5>
+                            <h5 class="card-title">{{ $informasi[0]->judul_informasi }}</h5>
                             <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
-                                {{ $info->created_at->diffForHumans() }}</small>
-                            <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}</p>
-                            <a href="/informasi/{{ $info->slug }}" class="btn btn-primary">Lihat selengkapnya</a>
+                                {{ $informasi[0]->created_at->diffForHumans() }}</small>
+                            <p class="card-text">{{ substr($informasi[0]->deskripsi, 0, 300) }}</p>
+                            <a href="/informasi/{{ $informasi[0]->slug }}" class="btn btn-primary btn-main">Lihat
+                                selengkapnya</a>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                    @foreach ($informasi->skip(1) as $info)
+                        <div class="card shadow">
+                            <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $info->judul_informasi }}</h5>
+                                <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
+                                    {{ $info->created_at->diffForHumans() }}</small>
+                                <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}</p>
+                                <a href="/informasi/{{ $info->slug }}" class="btn btn-primary">Lihat selengkapnya</a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
         </section>
 
         {{-- tentang kami --}}
         <section class="container px-5 pb-5 shadow" id="tentang"
             style="padding-top: 100px !important; margin-top: 100px !important">
             <h1 class="text-center">Tentang Kami</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sapiente!</p>
+            <p class="text-center">Hubungi kami jika anda memiliki pertanyaan dan masukan</p>
             <form method="" class="mt-5">
                 <div class="d-flex mb-3">
                     <input type="text" class="form-control me-2" id="nama" placeholder="Nama">
@@ -132,6 +137,18 @@
 
         {{-- info contact --}}
         <section class="container shadow mt-5 p-5">
+            <div class="d-flex mb-3">
+                <div class="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus optio quasi fuga doloremque
+                        perspiciatis ex cumque, deserunt ab! Sit ullam repellendus voluptas repellat error ad molestiae
+                        incidunt minus fuga totam fugiat, labore vitae saepe at pariatur architecto adipisci provident nam
+                        et aspernatur possimus hic officia dolore dignissimos. In amet pariatur ipsum aspernatur doloremque
+                        consequatur eos sed fugiat. Quas, magni. Ab quisquam laboriosam nulla modi facilis, inventore, quasi
+                        dignissimos culpa at, obcaecati qui. Eius iusto, modi quo similique porro aliquam qui itaque,
+                        molestiae officia, atque consequuntur dolores a facere necessitatibus nam quaerat praesentium dolore
+                        quasi. Nihil ad accusamus iure! Quos, at.</p>
+                </div>
+            </div>
             <div class="d-flex">
                 <h1 class="bi bi-house-fill"></h1>
                 <div class="ms-3">
