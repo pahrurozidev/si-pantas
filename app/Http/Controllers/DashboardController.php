@@ -126,4 +126,33 @@ class DashboardController extends Controller
             "penerima" => $penerima
         ]);
     }
+
+    public function history()
+    {
+        $penerima = Penerima::where('nik', auth()->user()->nik)->get();
+        return view('dashboard.warga.history', [
+            'penerima' => $penerima
+        ]);
+    }
+
+    public function detailHistory(Penerima $penerima)
+    {
+        return view("dashboard.warga.detailHistory", [
+            "penerima" => $penerima
+        ]);
+    }
+
+    public function historyRoleDesa()
+    {
+        return view("dashboard.desa.history", [
+            "dataPenerima" => Penerima::where('status_desa', '=', 'verifikasi')->where('status_warga', '=', 'verifikasi')->get()
+        ]);
+    }
+
+    public function detailHistoryRoleDesa(Penerima $penerima)
+    {
+        return view("dashboard.desa.detailHistory", [
+            "penerima" => $penerima
+        ]);
+    }
 }

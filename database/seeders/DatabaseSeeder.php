@@ -52,6 +52,21 @@ class DatabaseSeeder extends Seeder
             'desa' => 'Pohgading Timur',
         ]);
 
+        Penerima::create([
+            'nama' => 'Steven Grant',
+            'nik' => '2029272628282',
+            'telepon' => '081239292292',
+            'email' => 'steven.g@gmail.com',
+            'tgl_lahir' => 20220601,
+            'tempat_lahir' => 'Manado',
+            'jmlh_bantuan' => 10000000,
+            'jenis_bantuan' => 'Penerima Bantuan Ha (PKH)',
+            'provinsi' => 'Nusa Tenggara Barat',
+            'kabupaten' => 'Lombok Timur',
+            'kecamatan' => 'Pringgabaya',
+            'desa' => 'Pohgading Timur',
+        ]);
+
         // User::factory()->create([
         //     "nama" => "Pahrurozi",
         //     "nik" => "12345678",
