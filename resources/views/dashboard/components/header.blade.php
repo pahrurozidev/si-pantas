@@ -5,12 +5,12 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-nav border-start">
-        <div class="nav-item text-nowrap">
-            <a class="nav-link px-3 text-dark keluar" href="#">
-                <span class="d-inline-block">
-                    <i class="bi bi-box-arrow-right"></i>
-                </span> Keluar</a>
-        </div>
+        
+        <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="nav-link px-3 bg-light border-0"><i class="bi bi-box-arrow-right"></i><span
+                        class="ms-2">Keluar</span></button>
+            </form>
     </div>
 </header>
 
@@ -114,8 +114,7 @@
                 </li>
             </ul>
         @endcan
-        <div class="d-flex align-items-center px-3 mt-4 mb-1 keluar">
-            <i class="bi bi-box-arrow-right"></i><span class="ms-2">Keluar</span>
-        </div>
+       
+       
     </div>
 </nav>

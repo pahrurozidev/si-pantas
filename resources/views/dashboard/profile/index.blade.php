@@ -9,49 +9,48 @@
 
     <div class="col-lg-7">
                 <div class="card-style mb-30">
+                    @if (session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div>
+                        @endif
                     <form method="post" action="/dashboard/profile" >
-                        @csrf
-                        <h3 class="mb-25 fw-bold">Account Information</h6>
+                    @method('PUT')   
+                    @csrf
+                        
                             <div class="input-style-1">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="Full Name" id="name" name="name"
-                                    value="{{ auth()->user()->name }}" required />
-                            </div>
-                            <div class="input-style-1">
-                                <label>Username</label>
+                                <label>Nama</label>
                                 <input type="text" placeholder="Username" id="username" name="username"
                                     value="{{ auth()->user()->username }}" required />
+                            </div>
+                            <div class="input-style-1">
+                                <label>NIK</label>
+                                <input type="text" placeholder="Nik" id="nik" name="nik"
+                                    value="{{ auth()->user()->nik }}" required />
+                            </div>
+                            <div class="input-style-1">
+                                <label>Tgl.Lahir</label>
+                                <input type="text" placeholder="lahir" id="lahir" name="lahir"
+                                    value="{{ auth()->user()->tgl_lahir }}" required />
                             </div>
                             <div class="input-style-1">
                                 <label>Email</label>
                                 <input type="text" placeholder="Email" value="{{ auth()->user()->email }}" disabled />
                             </div>
                             <div class="input-style-1">
-                                <label>No Handphone</label>
-                                <input type="text" placeholder="No Handphone" id="no_hp" name="no_hp"
-                                    value="{{ auth()->user()->no_hp }}" required />
+                                <label>No.Handphone</label>
+                                <input type="text" placeholder="No.Handphone" value="{{ auth()->user()->telepon }}" id="no_hp" name="no_hp"
+                                     />
                             </div>
                             <div class="input-style-1">
-                                <label>Address</label>
-                                <textarea placeholder="Address" rows="5" name="address" id="address"
-                                    value="{{ auth()->user()->address}}"></textarea>
+                                <label>Alamat</label>
+                                <textarea placeholder="Alamat lengkap...." rows="4" name="address" id="address"
+                                    ></textarea>
                             </div>
-                            <div class="form-group mb-25">
-                                <div class="row align-items-end">
-                                    <div class="col-sm-3">
-                                        <img src="{{ url('') }}/storage/{{auth()->user()->photo}}" class="img-thumbnail"
-                                            id="output">
-                                    </div>
-                                    <div class="col-sm-9 ">
-                                        <div class="custom-file mt-auto">
-                                            <input type="file" class="form-control cs" id="image" name="image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <div class="input-style-1">
                                 <button type="submit"
-                                    class="main-btn btn-hover primary-btn ms-auto d-block">Submit</button>
+                                    class="main-btn btn-hover primary-btn ms-auto d-block">Simpan</button>
                             </div>
                     </form>
                     <!-- end input -->
