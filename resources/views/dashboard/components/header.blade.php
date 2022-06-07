@@ -5,12 +5,13 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-nav border-start">
-        
-        <form action="/logout" method="POST">
+        <div class="nav-item text-nowrap">
+            <form action="/logout" method="POST">
                 @csrf
                 <button type="submit" class="nav-link px-3 bg-light border-0"><i class="bi bi-box-arrow-right"></i><span
                         class="ms-2">Keluar</span></button>
             </form>
+        </div>
     </div>
 </header>
 
