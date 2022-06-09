@@ -16,7 +16,7 @@ class Desa
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!auth()->check() || !auth()->user()->desa) {
+        if (!auth()->check() || !auth()->user()->is_desa) {
             abort(403);
         }
 

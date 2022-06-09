@@ -2,8 +2,10 @@
 
 @section('content')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
-        <div class="d-flex justify-content-between flex-wrap flex-column flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">History Bantuan yang Sudah Tersalurkan</h1>
+        <div
+            class="d-flex text-center justify-content-between flex-wrap flex-column flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">History Bantuan</h1>
+            <p class="my-2 col-lg-8 m-auto">Dapatkan informasi bantuan sosial yang telah tersalurkan</p>
         </div>
         <div class="col-lg-12">
             {{-- bantuan terverifikasi --}}
@@ -44,7 +46,7 @@
                     </tbody>
                 </table>
             @else
-                <h5 class="mt-3 text-muted">Belum Ada Bantuan yang Tersalurkan</h5>
+                <p class="text-muted mt-4 text-center" style="font-style: italic;">Belum Ada Bantuan yang Tersalurkan</p>
             @endif
         </div>
     </main>

@@ -16,7 +16,7 @@ class Warga
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!auth()->check() || !auth()->user()->warga) {
+        if (!auth()->check() || !auth()->user()->is_warga) {
             abort(403);
         }
 

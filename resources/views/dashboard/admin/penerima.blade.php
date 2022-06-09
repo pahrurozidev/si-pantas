@@ -2,10 +2,12 @@
 
 @section('content')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
-        <div class="d-flex justify-content-between flex-wrap flex-column flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Data Penerima bulan ini</h1>
-            <p class="col-lg-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptatibus quos tempora,
-                veritatis dolorem eveniet praesentium beatae id culpa enim.</p>
+        <div
+            class="d-flex text-center justify-content-between flex-wrap flex-column flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Riwayat Penyaluran Bulanan</h1>
+            <p class="col-lg-8 m-auto">Silahkan meninjau penyaluran Bantuan Sosial dengan memastikan bahwa Kolom Verifikasi
+                Desa dan Warga berisi keterangan Tersalurkan. Bila salah satu tidak berisi keteragan tersalurkan silahkan
+                lakukan investigasi dan menghubungi pihak desa yang bersangkutan</p>
         </div>
         <div class="col-lg-12">
             {{-- bantuan terverifikasi --}}
@@ -16,7 +18,7 @@
                 </div>
             @endif
             @if (count($dataPenerima) === 0)
-                <h5 class="text-muted">Penerima bulan ini belum ada!</h5>
+                <p class="text-muted mt-4 text-center" style="font-style: italic;">Data penerima belum ada!</p>
             @else
                 <table class="table-bordered mt-3">
                     <thead class="bg-secondary text-white">

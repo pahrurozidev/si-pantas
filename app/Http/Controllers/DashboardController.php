@@ -45,7 +45,9 @@ class DashboardController extends Controller
 
     public function create()
     {
-        return view('dashboard.warga.laporan');
+        return view('dashboard.warga.laporan', [
+            "jenisBantuan" => JenisBantuan::all(),
+        ]);
     }
 
     public function store(Request $request)
@@ -53,18 +55,16 @@ class DashboardController extends Controller
         $validatedData = $request->validate([
             "question1" => "required",
             "question2" => "required",
-            "question3" => "required"
+            "jenis_bantuan" => "required",
+            "bentuk_bantuan" => "required",
         ]);
 
-        $JenisBantuan = JenisBantuan::where('id', auth()->user()->jenis_bantuan)->get();
-        if (count($JenisBantuan) === 0) {
-            $validatedData["jenis_bantuan"] = null;
-        } else {
-            $validatedData["jenis_bantuan"] = JenisBantuan::where('id', auth()->user()->jenis_bantuan)->get()[0]->nama_bantuan;
+        if ($validatedData["bentuk_bantuan"] === 'Tunai') {
+            $validatedData["jumlah1"] = $request->jumlah1;
+            $validatedData["jumlah2"] = $request->jumlah2;
         }
 
         $validatedData["slug"] = strtoupper(substr(md5(time()), 0, 5));
-        $validatedData["jmlh_bantuan"] = auth()->user()->jmlh_bantuan;
         $validatedData["deskripsi"] = $request->deskripsi;
         $validatedData["nama"] = auth()->user()->nama;
         $validatedData["nik"] = auth()->user()->nik;
@@ -72,6 +72,15 @@ class DashboardController extends Controller
         $validatedData["email"] = auth()->user()->email;
         $validatedData["tgl_lahir"] = auth()->user()->tgl_lahir;
         $validatedData["username"] = auth()->user()->username;
+        $validatedData["jmlh_bantuan"] = auth()->user()->jmlh_bantuan;
+
+        $validatedData["provinsi"] = auth()->user()->provinsi;
+        $validatedData["kabupaten"] = auth()->user()->kabupaten;
+        $validatedData["kecamatan"] = auth()->user()->kecamatan;
+        $validatedData["desa"] = auth()->user()->desa;
+        $validatedData["rt_rw"] = auth()->user()->rt_rw;
+        $validatedData["kode_pos"] = auth()->user()->kode_pos;
+        $validatedData["tempat_lahir"] = auth()->user()->tempat_lahir;
 
         Laporan::create($validatedData);
         return redirect("/dashboard/warga/laporan")->with("success", "Laporan berhasil dikirim dan akan diproses");

@@ -23,7 +23,7 @@
                             <a class="nav-link" href="#informasi">Informasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#tentang">Tentang</a>
+                            <a class="nav-link" href="#tentang">FAQ</a>
                         </li>
                     @endif
                     @auth

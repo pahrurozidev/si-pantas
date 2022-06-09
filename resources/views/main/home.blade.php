@@ -118,7 +118,7 @@
         {{-- tentang kami --}}
         <section class="container px-5 pb-5 shadow" id="tentang"
             style="padding-top: 100px !important; margin-top: 100px !important">
-            <h1 class="text-center">Tentang Kami</h1>
+            <h1 class="text-center">Pertanyaan dan Saran</h1>
             <p class="text-center">Hubungi kami jika anda memiliki pertanyaan dan masukan</p>
             <form method="" class="mt-5">
                 <div class="d-flex mb-3">

@@ -21,14 +21,16 @@ return new class extends Migration
             $table->string('nik')->unique();
             $table->string('telepon')->unique();
             $table->string('email')->unique();
-            $table->string('tempat_lahir');
             $table->date('tgl_lahir');
-            $table->string('jmlh_bantuan')->nullable();
             $table->string('jenis_bantuan');
-            $table->string("provinsi");
-            $table->string("kabupaten");
-            $table->string("kecamatan");
-            $table->string("desa");
+            $table->string('jmlh_bantuan')->nullable();
+            $table->string('provinsi')->nullable();
+            $table->string('kabupaten')->nullable();
+            $table->string('kecamatan')->nullable();
+            $table->string('desa')->nullable();
+            $table->string('rt_rw')->nullable();
+            $table->string('kode_pos')->nullable();
+            $table->string('tempat_lahir')->nullable();
             $table->timestamps();
         });
     }

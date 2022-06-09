@@ -7,6 +7,7 @@ use App\Models\JenisBantuan;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Response;
 
 class DashboardInfoController extends Controller
 {
@@ -17,7 +18,7 @@ class DashboardInfoController extends Controller
      */
     public function index()
     {
-        return view("dashboard.informasi.index", [
+        return view("dashboard.admin.informasi.index", [
             "informasi" => Informasi::all(),
         ]);
     }
@@ -32,7 +33,7 @@ class DashboardInfoController extends Controller
         $response = Http::get('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
         $data = $response->json();
 
-        return view("dashboard.informasi.create", [
+        return view("dashboard.admin.informasi.create", [
             "jenisBantuan" => JenisBantuan::all(),
             "dataProvinsi" => $data["value"],
         ]);
@@ -75,7 +76,7 @@ class DashboardInfoController extends Controller
      */
     public function show(Informasi $informasi)
     {
-        return view("dashboard.informasi.detail", [
+        return view("dashboard.admin.informasi.detail", [
             "informasi" => $informasi,
             "jenisBantuan" => JenisBantuan::where("id", $informasi->jenisBantuan_id)->get()
         ]);
@@ -92,7 +93,7 @@ class DashboardInfoController extends Controller
         $response = Http::get('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
         $data = $response->json();
 
-        return view("dashboard.informasi.edit", [
+        return view("dashboard.admin.informasi.edit", [
             "informasi" => $informasi,
             "jenisBantuan" => JenisBantuan::all(),
             "dataProvinsi" => $data["value"],

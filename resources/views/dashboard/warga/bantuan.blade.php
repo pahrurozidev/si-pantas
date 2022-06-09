@@ -2,34 +2,29 @@
 
 @section('content')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
-        <div class="d-flex justify-content-between flex-wrap flex-column flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Bantuan Bulan Ini</h1>
-            <p>Silakan klik tombol centang jika anda sudah menerima bantuan ini baik dalam bentuk tunai maupun non-tunai!
-            </p>
+        <div
+            class="d-flex justify-content-between flex-wrap text-center flex-column flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Bantuan Bulanan</h1>
+            <p class="col-lg-8 m-auto">Silahkan lakukan Verifikasi dengan memberikan centang pada kolom Verifikasi bila anda
+                telah menerima bantuan
+                sosial dalam bentuk tunai maupun non-tunai</p>
         </div>
         <div class="col-lg-12">
-            {{-- bantuan terverifikasi --}}
-            @if (session()->has('successUpdate'))
-                <div class="alert col-lg-8 alert-success alert-dismissible fade show mt-3 mb-0" role="alert">
-                    {{ session('successUpdate') }} Lorem ipsum dolor sit.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
             <div class="col-lg-12">
                 {{-- bantuan terverifikasi --}}
                 @if (session()->has('successUpdate'))
                     <div class="alert alert-success alert-dismissible fade show mt-3 mb-0" role="alert">
-                        {{ session('successUpdate') }} Lorem ipsum dolor sit.
+                        {{ session('successUpdate') }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
                 @if (count($penerima) === 0)
-                    <h5 class="text-muted mt-4">Data anda tidak terdaftar mendapatkan bantuan sosial bulan ini</h5>
+                    <p class="text-muted mt-4 text-center" style="font-style: italic;">bantuan masih kosong!</p>
                 @else
                     <table class="table-bordered mt-3">
                         <thead class="bg-secondary text-white">
                             <tr>
-                                <th scope="col" class="text-center">Nama Penerima</th>
+                                <th scope="col" class="text-center">Penerima</th>
                                 <th scope="col" class="text-center">Jenis Bantuan</th>
                                 <th scope="col" class="text-center">Desa</th>
                                 <th scope="col" class="text-center">Verifikasi</th>

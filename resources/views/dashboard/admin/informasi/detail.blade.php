@@ -2,12 +2,12 @@
 
 @section('content')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
-        <div class="d-flex justify-content-between flex-column flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+        <div class="d-flex text-center justify-content-between flex-column flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Detail Bantuan Sosial</h1>
-            <div class="aksi d-flex me-auto">
-                <a href="/dashboard/informasi" class="btn btn-warning text-white">Kembali</a>
-                <a href="/dashboard/informasi/{{ $informasi->slug }}/edit" class="btn btn-primary ms-2">Edit</a>
-                <form action="/dashboard/informasi/{{ $informasi->slug }}" method="POST">
+            <div class="aksi d-flex m-auto">
+                <a href="/dashboard/admin/informasi" class="btn btn-warning text-white">Kembali</a>
+                <a href="/dashboard/admin/informasi/{{ $informasi->slug }}/edit" class="btn btn-primary ms-2">Edit</a>
+                <form action="/dashboard/admin/informasi/{{ $informasi->slug }}" method="POST">
                     @method('delete')
                     @csrf
                     <button class="btn fs-6 btn-danger ms-2" onclick="return confirm('Apakah anda yakin?')">Hapus</button>

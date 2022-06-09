@@ -136,6 +136,11 @@ div.keluar {
     text-decoration: none !important;
 }
 
+/* pelaporan */
+.jumlah_bantuan_laporan {
+    display: none;
+}
+
 /* dashboard-temp */
 .sidebar {
     position: fixed;

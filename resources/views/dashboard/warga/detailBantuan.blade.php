@@ -2,11 +2,10 @@
 
 @section('content')
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
-        <div class="pt-3 pb-2 mb-3 border-bottom">
+        <div class="pt-3 pb-2 mb-3 text-center border-bottom">
             <h1 class="h2">Detail Penerima: {{ $penerima->nama }}</h1>
-            <a href="/dashboard/warga/bantuan" class="btn btn-warning text-white">Kembali</a>
         </div>
-        <div class="col-lg-12 shadow p-4">
+        <div class="col-lg-8 m-auto shadow p-4">
             <ul>
                 <li class="mb-1">
                     <div class="d-flex">
@@ -121,6 +120,7 @@
                     </div>
                 </li>
             </ul>
+            <a href="/dashboard/warga/bantuan" class="btn ms-3 mt-2 btn-secondary text-white">Kembali</a>
         </div>
     </main>
 @endsection
