@@ -1,13 +1,3 @@
-const bentukBantuan = document.querySelector("#bentuk_bantuan");
-const jumlahBantuanLaporan = document.querySelector(".jumlah_bantuan_laporan");
-bentukBantuan.addEventListener("change", () => {
-    if (bentukBantuan.value === "Tunai") {
-        jumlahBantuanLaporan.style.display = "block";
-    } else {
-        jumlahBantuanLaporan.style.display = "none";
-    }
-});
-
 const convertToUpperCase = (words) => {
     const sentences = words.toLowerCase().split(" ");
     return sentences.map((word) => {
@@ -135,3 +125,13 @@ const dataDesa = async (data) => {
         }
     })
 })()
+
+const bentukBantuan = document.querySelector("#bentuk_bantuan");
+const jumlahBantuanLaporan = document.querySelector(".jumlah_bantuan_laporan");
+bentukBantuan.addEventListener("change", () => {
+    if (bentukBantuan.value === "Tunai") {
+        jumlahBantuanLaporan.style.display = "block";
+    } else {
+        jumlahBantuanLaporan.style.display = "none";
+    }
+});

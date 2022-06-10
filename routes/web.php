@@ -60,4 +60,10 @@ Route::get("/dashboard/desa/history", [DashboardController::class, 'historyRoleD
 Route::get("/dashboard/desa/history/detail/{penerima:id}", [DashboardController::class, 'detailHistoryRoleDesa'])->middleware("desa");
 
 // desa, warga, admin
-Route::get("/dashboard/profile", [ProfileController::class, 'index'])->middleware("auth");
+Route::middleware('auth')->group(function () {
+    Route::prefix('profile')->group(function () {
+        Route::get('index', [ProfileController::class, 'index'])->name('profile.index');
+        Route::get('edit', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::put('update', [ProfileController::class, 'update'])->name('profile.update');
+    });
+});
