@@ -26,7 +26,7 @@
                 </a>
             </div>
             <li class="nav-item">
-                <a class="nav-link" href="/dashboard/profile">
+                <a class="nav-link" href="{{ route('profile.index') }}">
                     <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
             </li>
 

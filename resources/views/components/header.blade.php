@@ -33,7 +33,7 @@
                                 Selamat Datang {{ auth()->user()->nama }}<div class="btn-group">
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="/dashboard/profile"><i class="bi bi-laptop"></i><span
+                                <li><a class="dropdown-item" href="/profile/index"><i class="bi bi-laptop"></i><span
                                             class="ms-2">Dashboard</span></a>
                                 </li>
                                 <li>
