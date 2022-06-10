@@ -15,16 +15,23 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ asset('img/hero2.jpg') }}" class="d-block w-100" alt="..." height="500"
-                            style="object-fit: cover;">
+                        <img src="{{ asset('img/hero2.jpg') }}" class="d-block w-100"
+                            style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;" alt="..."
+                            height="500">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h5 class="fs-1" style="line-height: 60px">Selamat Datang, Tingkatkan Integritas dan
+                                Transparansi Setiap
+                                Penyaluran
+                                Bantuan Sosial</h5>
+                            <p style="font-size: 20px;">Sipantas atau Sistem Informasi Pelaporan Bantuan Sosial adalah situs
+                                web yang akan membantu
+                                baik pemerintah maupun penerima bantuan untuk memantau penyaluran bantuan dana sosial yang
+                                efektif dan user-friendly. </p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('img/hero3.jpg') }}" class="d-block w-100" alt="..." height="500"
-                            style="object-fit: cover;">
+                            style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
@@ -32,7 +39,7 @@
                     </div>
                     <div class="carousel-item">
                         <img src="{{ asset('img/hero1.jpg') }}" class="d-block w-100" alt="..." height="500"
-                            style="object-fit: cover;">
+                            style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p>
@@ -89,24 +96,26 @@
                 <div class="articles mt-5">
                     <div class="card shadow card-main">
                         <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="..." height="263"
-                            style="object-fit: cover;">
+                            style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">{{ $informasi[0]->judul_informasi }}</h5>
                             <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
                                 {{ $informasi[0]->created_at->diffForHumans() }}</small>
-                            <p class="card-text">{{ substr($informasi[0]->deskripsi, 0, 300) }}</p>
+                            <p class="card-text" style="line-height: 30px">
+                                {{ substr($informasi[0]->deskripsi, 0, 500) }}....</p>
                             <a href="/informasi/{{ $informasi[0]->slug }}" class="btn btn-primary btn-main">Lihat
                                 selengkapnya</a>
                         </div>
                     </div>
                     @foreach ($informasi->skip(1) as $info)
                         <div class="card shadow">
-                            <img src="{{ asset('img/hero2.jpg') }}" class="card-img-top" alt="...">
+                            <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top" alt="..."
+                                style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $info->judul_informasi }}</h5>
                                 <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
                                     {{ $info->created_at->diffForHumans() }}</small>
-                                <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}</p>
+                                <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}...</p>
                                 <a href="/informasi/{{ $info->slug }}" class="btn btn-primary">Lihat selengkapnya</a>
                             </div>
                         </div>
@@ -116,8 +125,8 @@
         </section>
 
         {{-- tentang kami --}}
-        <section class="container px-5 pb-5 shadow" id="tentang"
-            style="padding-top: 100px !important; margin-top: 100px !important">
+        <section class="container shadow" id="tentang"
+            style="padding: 100px 100px 50px; !important; margin-top: 100px !important">
             <h1 class="text-center">Pertanyaan dan Saran</h1>
             <p class="text-center">Hubungi kami jika anda memiliki pertanyaan dan masukan</p>
             <form method="" class="mt-5">
@@ -139,14 +148,12 @@
         <section class="container shadow mt-5 p-5">
             <div class="d-flex mb-3">
                 <div class="">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus optio quasi fuga doloremque
-                        perspiciatis ex cumque, deserunt ab! Sit ullam repellendus voluptas repellat error ad molestiae
-                        incidunt minus fuga totam fugiat, labore vitae saepe at pariatur architecto adipisci provident nam
-                        et aspernatur possimus hic officia dolore dignissimos. In amet pariatur ipsum aspernatur doloremque
-                        consequatur eos sed fugiat. Quas, magni. Ab quisquam laboriosam nulla modi facilis, inventore, quasi
-                        dignissimos culpa at, obcaecati qui. Eius iusto, modi quo similique porro aliquam qui itaque,
-                        molestiae officia, atque consequuntur dolores a facere necessitatibus nam quaerat praesentium dolore
-                        quasi. Nihil ad accusamus iure! Quos, at.</p>
+                    <p class="fs-5" style="text-indent: 80px; line-height: 35px">Sipantas atau Sistem Informasi
+                        Pelaporan Bantuan Sosial adalah situs web yang akan membantu baik
+                        pemerintah maupun penerima bantuan untuk memantau penyaluran bantuan dana sosial yang efektif dan
+                        user-friendly. Sipantas berfungsi sebagai wadah dalam pelaporkan setiap kejanggalan dalam penyaluran
+                        bantuan sosial dan berfungsi dalam memantau dan menyelidiki guna meningkatkan integritas dan
+                        transparansi setiap penyaluran bantuan sosial</p>
                 </div>
             </div>
             <div class="d-flex">

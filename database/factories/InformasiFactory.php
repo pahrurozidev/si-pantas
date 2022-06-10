@@ -20,6 +20,8 @@ class InformasiFactory extends Factory
             "jenisBantuan_id" => mt_rand(1, 5),
             "judul_informasi" => $this->faker->sentence(mt_rand(10, 15)),
             "slug" => $this->faker->slug(2),
+            'target_penerima' => mt_rand(30, 40),
+            'bantuan_perorang' => mt_rand(300000, 400000),
             "jmlh_bantuan" => $this->faker->randomNumber(5, true),
             "provinsi" => $this->faker->randomElement(['Nusa Tenggara Barat', 'Nusa Tenggara Timur', 'Papua', 'Sulawesi', 'Jawa Timur']),
             "kabupaten" => $this->faker->randomElement(['Lombok Timur', 'Lombok Utara', 'Lombok Tengah', 'Lombok Barat', 'Sumbawa Barat']),

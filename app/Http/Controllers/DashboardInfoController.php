@@ -18,6 +18,8 @@ class DashboardInfoController extends Controller
      */
     public function index()
     {
+        // $pen = Informasi::all();
+        // dd($pen);
         return view("dashboard.admin.informasi.index", [
             "informasi" => Informasi::all(),
         ]);
@@ -51,6 +53,8 @@ class DashboardInfoController extends Controller
             "judul_informasi" => "required|min:5",
             "jmlh_bantuan" => "required",
             "jenisBantuan_id" => "required",
+            "target_penerima" => "required",
+            "bantuan_perorang" => "required",
             "provinsi" => "required",
             "kabupaten" => "required",
             "kecamatan" => "required",

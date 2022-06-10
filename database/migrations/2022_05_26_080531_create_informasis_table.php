@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string("judul_informasi");
             $table->string("slug")->unique();
             $table->string("jmlh_bantuan");
+            $table->string("target_penerima"); //
+            $table->string("bantuan_perorang"); //
             $table->string("provinsi");
             $table->string("kabupaten");
             $table->string("kecamatan");

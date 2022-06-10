@@ -6,8 +6,8 @@
             <h1 class="h2">Detail Penerima: {{ $penerima->nama }}</h1>
         </div>
         <div class="col-lg-8 m-auto shadow p-4">
-            <ul>
-                <li class="mb-1">
+            <ul class="list-group list-group-flush">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Verifikasi Desa</span>
@@ -20,7 +20,7 @@
                         @endif
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Verifikasi Warga</span>
@@ -33,7 +33,7 @@
                         @endif
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Nama Penerima</span>
@@ -42,7 +42,7 @@
                         <div class="ms-2">{{ $penerima->nama }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>NIK</span>
@@ -51,7 +51,7 @@
                         <div class="ms-2">{{ $penerima->nik }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Email</span>
@@ -60,7 +60,7 @@
                         <div class="ms-2">{{ $penerima->email }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Tempat Lahir</span>
@@ -69,7 +69,7 @@
                         <div class="ms-2">{{ $penerima->tempat_lahir }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Tanggal Lahir</span>
@@ -78,7 +78,7 @@
                         <div class="ms-2">{{ $penerima->tgl_lahir }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Jenis Bantuan</span>
@@ -87,7 +87,7 @@
                         <div class="ms-2">{{ $penerima->jenis_bantuan }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Jumlah Bantuan</span>
@@ -96,7 +96,34 @@
                         <div class="ms-2">Rp. {{ $penerima->jmlh_bantuan }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                            <span>Telepon</span>
+                            <span>:</span>
+                        </div>
+                        <div class="ms-2">{{ $penerima->telepon }}</div>
+                    </div>
+                </li>
+                <li class="mb-1 list-group-item">
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                            <span>RT/RW</span>
+                            <span>:</span>
+                        </div>
+                        <div class="ms-2">{{ $penerima->rt_rw }}</div>
+                    </div>
+                </li>
+                <li class="mb-1 list-group-item">
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                            <span>Kode Pos</span>
+                            <span>:</span>
+                        </div>
+                        <div class="ms-2">{{ $penerima->kode_pos }}</div>
+                    </div>
+                </li>
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Provinsi</span>
@@ -105,7 +132,7 @@
                         <div class="ms-2">{{ $penerima->provinsi }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Kabupaten</span>
@@ -114,7 +141,7 @@
                         <div class="ms-2">{{ $penerima->kabupaten }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Kecamatan</span>
@@ -123,7 +150,7 @@
                         <div class="ms-2">{{ $penerima->kecamatan }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-1 list-group-item">
                     <div class="d-flex">
                         <div class="d-flex justify-content-between" style="width: 130px !important">
                             <span>Desa</span>
@@ -132,8 +159,10 @@
                         <div class="ms-2">{{ $penerima->desa }}</div>
                     </div>
                 </li>
+                <li class="mb-1 list-group-item">
+                    <a href="/dashboard/desa/penerima" class="btn mt-2 btn-secondary text-white">Kembali</a>
+                </li>
             </ul>
-            <a href="/dashboard/desa/penerima" class="btn ms-3 mt-2 btn-secondary text-white">Kembali</a>
         </div>
     </main>
 @endsection

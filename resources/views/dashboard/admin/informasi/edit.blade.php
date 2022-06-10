@@ -35,6 +35,30 @@
                         </div>
                     @enderror
                 </div>
+                {{-- Target penerima --}}
+                <div class="mb-3">
+                    <label for="target_penerima" class="form-label @error('target_penerima') is-invalid @enderror">Target
+                        Penerima</label>
+                    <input type="number" class="form-control" name="target_penerima" id="target_penerima"
+                        placeholder="Jumlah Bantuan" value="{{ old('target_penerima', $informasi->target_penerima) }}">
+                    @error('target_penerima')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                {{-- Jumlah bantuan per orang --}}
+                <div class="mb-3">
+                    <label for="bantuan_perorang" class="form-label @error('bantuan_perorang') is-invalid @enderror">Jumlah
+                        bantuan per orang</label>
+                    <input type="number" class="form-control" name="bantuan_perorang" id="bantuan_perorang"
+                        placeholder="Jumlah Bantuan" value="{{ old('bantuan_perorang', $informasi->bantuan_perorang) }}">
+                    @error('bantuan_perorang')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
                 {{-- jenis bantuan --}}
                 <div class="mb-3">
                     <label for="jenisBantuan_id" class="form-label @error('jenisBantuan_id') is-invalid @enderror">Jenis

@@ -7,7 +7,7 @@
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Tambah Bantuan Sosial</h1>
             </div>
-            <form action="/dashboard/informasi" method="POST">
+            <form action="/dashboard/admin/informasi" method="POST">
                 @csrf
                 {{-- nama bantuan --}}
                 <div class="mb-3">
@@ -30,6 +30,30 @@
                         name="jmlh_bantuan" id="jmlh_bantuan" placeholder="Jumlah Bantuan"
                         value="{{ old('jmlh_bantuan') }}">
                     @error('jmlh_bantuan')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                {{-- Target penerima --}}
+                <div class="mb-3">
+                    <label for="target_penerima" class="form-label">Target Penerima</label>
+                    <input type="number" class="form-control @error('target_penerima') is-invalid @enderror"
+                        name="target_penerima" id="target_penerima" placeholder="Jumlah Bantuan"
+                        value="{{ old('target_penerima') }}">
+                    @error('target_penerima')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                {{-- Jumlah bantuan per orang --}}
+                <div class="mb-3">
+                    <label for="bantuan_perorang" class="form-label">Jumlah bantuan per orang</label>
+                    <input type="number" class="form-control @error('bantuan_perorang') is-invalid @enderror"
+                        name="bantuan_perorang" id="bantuan_perorang" placeholder="Jumlah Bantuan"
+                        value="{{ old('bantuan_perorang') }}">
+                    @error('bantuan_perorang')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>

@@ -57,12 +57,14 @@
             {{-- desa --}}
             @can('desa')
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('dashboard/desa/penerima') ? 'active' : '' }}" href="/dashboard/desa/penerima">
+                    <a class="nav-link {{ Request::is('dashboard/desa/penerima') ? 'active' : '' }}"
+                        href="/dashboard/desa/penerima">
                         <i class="bi bi-person-check text-secondary"></i> <span class="ms-1">Data
                             Penerima</span> </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('dashboard/desa/history') ? 'active' : '' }}" href="/dashboard/desa/history">
+                    <a class="nav-link {{ Request::is('dashboard/desa/history') ? 'active' : '' }}"
+                        href="/dashboard/desa/history">
                         <i class="bi bi-clock-history"></i> <span class="ms-1">History</span> </a>
                 </li>
             @endcan
@@ -93,11 +95,11 @@
                         href="/dashboard/admin/informasi">
                         <i class="bi bi-clipboard-data"></i> <span class="ms-1">Informasi</span> </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-person-lines-fill text-secondary"></i> <span class="ms-1">Data
                             Warga</span> </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('dashboard/admin/penerima') ? 'active' : '' }}"
                         href="/dashboard/admin/penerima">

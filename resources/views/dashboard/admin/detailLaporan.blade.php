@@ -178,20 +178,20 @@
                                     <p class="badge bg-primary">{{ $laporan->question2 }}</p>
                                 </div>
                                 <div class="list-group-item">
-                                    <h3 class="h6 fw-normal">2. Apa jenis bantuan yang diberikan?</h3>
+                                    <h3 class="h6 fw-normal">3. Apa jenis bantuan yang diberikan?</h3>
                                     <p class="badge bg-primary">{{ $laporan->jenis_bantuan }}</p>
                                 </div>
                                 <div class="list-group-item">
-                                    <h3 class="h6 fw-normal">2. Bentuk bantuan</h3>
+                                    <h3 class="h6 fw-normal">4. Bentuk bantuan</h3>
                                     <p class="badge bg-primary">{{ $laporan->bentuk_bantuan }}</p>
                                 </div>
                                 @if ($laporan->bentuk_bantuan === 'Tunai')
                                     <div class="list-group-item">
-                                        <h3 class="h6 fw-normal">2. Berapa jumlah yang diterima?</h3>
+                                        <h3 class="h6 fw-normal">5. Berapa jumlah yang diterima?</h3>
                                         <p class="badge bg-primary">Rp. {{ $laporan->jumlah1 }}</p>
                                     </div>
                                     <div class="list-group-item">
-                                        <h3 class="h6 fw-normal">2. Berapa yang seharusnya diterima?</h3>
+                                        <h3 class="h6 fw-normal">6. Berapa yang seharusnya diterima?</h3>
                                         <p class="badge bg-primary">Rp. {{ $laporan->jumlah2 }}</p>
                                     </div>
                                 @endif

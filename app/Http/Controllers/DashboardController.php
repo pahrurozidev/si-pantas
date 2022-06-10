@@ -15,6 +15,13 @@ class DashboardController extends Controller
         return view('dashboard.index');
     }
 
+    public function daftarPenerima()
+    {
+        return view("main.daftarPenerima", [
+            "dataPenerima" => Penerima::all()
+        ]);
+    }
+
     public function bantuan()
     {
         $penerima = Penerima::where('nik', auth()->user()->nik)->get();
