@@ -73,18 +73,18 @@
             <p class="text-center">Tingkatkan kemudahan dalam penyaluran bantuan sosial dengan fitur kami</p>
             <div class="row mt-5 p-3 feature">
                 <div class="text-center shadow rounded">
-                    <img src="{{ asset('img/laporkan.webp') }}" alt="">
+                    <img src="{{ asset('img/laporkan.jpg') }}" alt="">
                     <h4>Laporkan</h4>
                     <p>Tingkatkan ketepatan bantuan sosial bagi penerima dengan melaporkan setiap penyaluran bantuan sosial
                         yang dilakukan</p>
                 </div>
                 <div class="text-center shadow rounded">
-                    <img src="{{ asset('img/tracking.webp') }}" alt="">
+                    <img src="{{ asset('img/tracking.jpg') }}" alt="">
                     <h4>Tracking</h4>
                     <p>Tingkatkan transparansi dan integritas dengan memantau setiap proses penyaluran bantuan sosial</p>
                 </div>
                 <div class="text-center shadow rounded">
-                    <img src="{{ asset('img/selidiki.webp') }}" alt="">
+                    <img src="{{ asset('img/selidiki.jpg') }}" alt="">
                     <h4>Selidiki</h4>
                     <p>Berantas tindak penyelewengan bantuan sosial dengan melakukan penyelidikan terhadap proses penyaluran
                         bantuan sosial</p>
