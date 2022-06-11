@@ -86,10 +86,6 @@
                         <label class="input-group-text" for="provinsi">Pilihan</label>
                         <select class="form-select" name="provinsi" id="provinsi">
                             <option selected>Pilih Provinsi</option>
-                            @foreach ($dataProvinsi as $provinsi)
-                                <option value="{{ $provinsi['id'] }} {{ ucwords(strtolower($provinsi['name'])) }}">
-                                    {{ ucwords(strtolower($provinsi['name'])) }}</option>
-                            @endforeach
                         </select>
                         @error('provinsi')
                             <div class="invalid-feedback">

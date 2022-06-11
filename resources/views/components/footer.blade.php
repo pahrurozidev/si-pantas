@@ -5,7 +5,7 @@
             <h5 class="mb-3">Hubungi Kami</h5>
             <div class="d-flex">
                 <i class="bi bi-envelope-open-fill"></i>
-                <p class="ms-2">pahrurozi17@gmail.com</p>
+                <p class="ms-2">pantashelp@gmail.com</p>
             </div>
             <div class="d-flex">
                 <i class="bi bi-telephone-fill"></i>

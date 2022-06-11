@@ -25,10 +25,13 @@
                     <i class="bi bi-house"></i><span class="ms-2">Beranda</span>
                 </a>
             </div>
-            <li class="nav-item">
-                <a class="nav-link" href="/dashboard/profile">
-                    <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
-            </li>
+            @if (auth()->user()->is_warga)
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('profile/index') ? 'active' : '' }}"
+                        href="{{ route('profile.index') }}">
+                        <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
+                </li>
+            @endif
 
             {{-- label role --}}
             @can('admin')

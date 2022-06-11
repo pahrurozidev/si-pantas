@@ -10,7 +10,7 @@ class InformasiController extends Controller
 {
     public function show(Informasi $informasi)
     {
-        return view("main.detail", [
+        return view("main.detailInformasi", [
             "informasi" => $informasi,
             "jenisBantuan" => JenisBantuan::where("id", $informasi->jenisBantuan_id)->get()
         ]);

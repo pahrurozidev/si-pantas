@@ -94,13 +94,9 @@ class DashboardInfoController extends Controller
      */
     public function edit(Informasi $informasi)
     {
-        $response = Http::get('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
-        $data = $response->json();
-
         return view("dashboard.admin.informasi.edit", [
             "informasi" => $informasi,
-            "jenisBantuan" => JenisBantuan::all(),
-            "dataProvinsi" => $data["value"],
+            "jenisBantuan" => JenisBantuan::all()
         ]);
     }
 
@@ -117,6 +113,8 @@ class DashboardInfoController extends Controller
             "judul_informasi" => "required|min:5",
             "jmlh_bantuan" => "required",
             "jenisBantuan_id" => "required",
+            "target_penerima" => "required",
+            "bantuan_perorang" => "required",
             "provinsi" => "required",
             "kabupaten" => "required",
             "kecamatan" => "required",

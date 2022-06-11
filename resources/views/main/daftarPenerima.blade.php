@@ -35,9 +35,13 @@
                         @foreach ($dataPenerima as $penerima)
                             <tr>
                                 <td scope="row" class="text-center">{{ $loop->iteration }}</td>
-                                <td class="p-2 col-lg-3 text-center">{{ $penerima->nama }}</td>
-                                <td class="p-2 col-lg-3 text-center">{{ $penerima->jenis_bantuan }}</td>
-                                <td class="p-2 col-lg-3 text-center">{{ $penerima->jmlh_bantuan }}</td>
+                                <td class="p-2 col-lg-2 text-center">{{ $penerima->nama }}</td>
+                                <td class="p-2 col-lg-2 text-center">{{ $penerima->jenis_bantuan }}</td>
+                                @if (strlen($penerima->jmlh_bantuan) <= 10)
+                                    <td class="p-2 col-lg-3 text-center">Rp. {{ $penerima->jmlh_bantuan }}</td>
+                                @else
+                                    <td class="p-2 col-lg-3 text-center">{{ $penerima->jmlh_bantuan }}</td>
+                                @endif
                                 <td class="p-2 col-lg-2 text-center">{{ $penerima->kabupaten }}</td>
                                 <td class="p-2 col-lg-2 text-center">{{ $penerima->kecamatan }}</td>
                                 <td class="p-2 col-lg-2 text-center">{{ $penerima->desa }}</td>

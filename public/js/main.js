@@ -11,6 +11,25 @@ const kabupatenElement = document.querySelector("#kabupaten");
 const kecamatanElement = document.querySelector("#kecamatan");
 const desaElement = document.querySelector("#desa");
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    render();
+})
+
+const render = async () => {
+    const provinsi = await fetch('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
+    const data = provinsi.json();
+    dataProvinsi(data);
+}
+
+const dataProvinsi = async (data) => {
+    const provinsi = await data;
+    provinsi.value.forEach(element => {
+        return provinsiElement.innerHTML +=
+            `<option value="${element.id} ${convertToUpperCase(element.name)}">${convertToUpperCase(element.name)}</option>`;
+    });
+}
+
 provinsiElement.addEventListener("change", async () => {
     kabupatenElement.innerHTML = '';
 

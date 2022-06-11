@@ -15,7 +15,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ asset('img/hero2.jpg') }}" class="d-block w-100"
+                        <img src="{{ asset('img/hero2.webp') }}" class="d-block w-100"
                             style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;" alt="..."
                             height="500">
                         <div class="carousel-caption d-none d-md-block">
@@ -29,22 +29,30 @@
                                 efektif dan user-friendly. </p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/hero3.jpg') }}" class="d-block w-100" alt="..." height="500"
-                            style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                    @if (count($informasi))
+                        <div class="carousel-item">
+                            <img src="{{ asset('img/hero4.webp') }}" class="d-block w-100" alt="..." height="500"
+                                style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fs-3" style="line-height: 40px">
+                                    <a href="/informasi/{{ $informasi[0]->slug }}"
+                                        class="text-decoration-none text-white">{{ $informasi[0]->judul_informasi }}</a>
+                                </h5>
+                                <p style="font-size: 20px;">{{ substr($informasi[0]->deskripsi, 0, 300) }}...</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('img/hero1.jpg') }}" class="d-block w-100" alt="..." height="500"
-                            style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div class="carousel-item">
+                            <img src="{{ asset('img/hero5.webp') }}" class="d-block w-100" alt="..." height="500"
+                                style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fs-3" style="line-height: 40px">
+                                    <a href="/informasi/{{ $informasi[1]->slug }}"
+                                        class="text-decoration-none text-white">{{ $informasi[1]->judul_informasi }}</a>
+                                </h5>
+                                <p style="font-size: 20px;">{{ substr($informasi[1]->deskripsi, 0, 300) }}...</p>
+                            </div>
                         </div>
-                    </div>
+                    @endif
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="prev">
@@ -65,18 +73,18 @@
             <p class="text-center">Tingkatkan kemudahan dalam penyaluran bantuan sosial dengan fitur kami</p>
             <div class="row mt-5 p-3 feature">
                 <div class="text-center shadow rounded">
-                    <img src="{{ asset('img/laporkan.jpg') }}" alt="">
+                    <img src="{{ asset('img/laporkan.webp') }}" alt="">
                     <h4>Laporkan</h4>
                     <p>Tingkatkan ketepatan bantuan sosial bagi penerima dengan melaporkan setiap penyaluran bantuan sosial
                         yang dilakukan</p>
                 </div>
                 <div class="text-center shadow rounded">
-                    <img src="{{ asset('img/tracking.jpg') }}" alt="">
+                    <img src="{{ asset('img/tracking.webp') }}" alt="">
                     <h4>Tracking</h4>
                     <p>Tingkatkan transparansi dan integritas dengan memantau setiap proses penyaluran bantuan sosial</p>
                 </div>
                 <div class="text-center shadow rounded">
-                    <img src="{{ asset('img/selidiki.jpg') }}" alt="">
+                    <img src="{{ asset('img/selidiki.webp') }}" alt="">
                     <h4>Selidiki</h4>
                     <p>Berantas tindak penyelewengan bantuan sosial dengan melakukan penyelidikan terhadap proses penyaluran
                         bantuan sosial</p>
@@ -95,7 +103,7 @@
             @else
                 <div class="articles mt-5">
                     <div class="card shadow card-main">
-                        <img src="{{ asset('img/hero1.jpg') }}" class="card-img-top" alt="..." height="263"
+                        <img src="{{ asset('img/hero4.webp') }}" class="card-img-top" alt="..." height="263"
                             style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title">{{ $informasi[0]->judul_informasi }}</h5>
@@ -109,7 +117,7 @@
                     </div>
                     @foreach ($informasi->skip(1) as $info)
                         <div class="card shadow">
-                            <img src="{{ asset('img/hero3.jpg') }}" class="card-img-top" alt="..."
+                            <img src="{{ asset('img/hero5.webp') }}" class="card-img-top" alt="..."
                                 style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $info->judul_informasi }}</h5>

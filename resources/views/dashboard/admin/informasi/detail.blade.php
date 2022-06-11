@@ -14,63 +14,81 @@
             {{-- deskripsi --}}
             <p>{!! $informasi->deskripsi !!}</p>
             <ul>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Provinsi</span>
                             <span>:</span>
                         </div>
                         <div class="ms-2">{{ $informasi->provinsi }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Kabupaten</span>
                             <span>:</span>
                         </div>
                         <div class="ms-2">{{ $informasi->kabupaten }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Kecamatan</span>
                             <span>:</span>
                         </div>
                         <div class="ms-2">{{ $informasi->kecamatan }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Desa</span>
                             <span>:</span>
                         </div>
                         <div class="ms-2">{{ $informasi->desa }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Jenis Bantuan</span>
                             <span>:</span>
                         </div>
                         <div class="ms-2">{{ $jenisBantuan[0]['nama_bantuan'] }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Jumlah Bantuan</span>
                             <span>:</span>
                         </div>
                         <div class="ms-2">Rp. {{ $informasi->jmlh_bantuan }}</div>
                     </div>
                 </li>
-                <li class="mb-1">
+                <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 130px !important">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                            <span>Target penerima</span>
+                            <span>:</span>
+                        </div>
+                        <div class="ms-2">{{ $informasi->target_penerima }} Orang</div>
+                    </div>
+                </li>
+                <li class="mb-3">
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                            <span>Jumlah Bantuan Per Orang</span>
+                            <span>:</span>
+                        </div>
+                        <div class="ms-2">Rp. {{ $informasi->bantuan_perorang }}</div>
+                    </div>
+                </li>
+                <li class="mb-3">
+                    <div class="d-flex">
+                        <div class="d-flex justify-content-between" style="width: 200px !important">
                             <span>Penerima</span>
                             <span>:</span>
                         </div>

@@ -91,10 +91,6 @@
                             <option value="{{ $informasi->provinsi }} {{ ucwords(strtolower($informasi->provinsi)) }}"
                                 selected>
                                 {{ ucwords(strtolower($informasi->provinsi)) }}</option>
-                            @foreach ($dataProvinsi as $provinsi)
-                                <option value="{{ $provinsi['id'] }} {{ ucwords(strtolower($provinsi['name'])) }}">
-                                    {{ ucwords(strtolower($provinsi['name'])) }}</option>
-                            @endforeach
                         </select>
                         @error('provinsi')
                             <div class="text-danger">
