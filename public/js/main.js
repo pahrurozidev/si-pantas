@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const render = async () => {
-    const provinsi = await fetch('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
+    const provinsi = await fetch('https://api.binderbyte.com/wilayah/provinsi?api_key=7f8e9d34191b5a34f476b9aa06e9732d597d9a762bba5b1586c0f9d2c822c254');
     const data = provinsi.json();
     dataProvinsi(data);
 }

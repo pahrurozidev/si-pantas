@@ -73,7 +73,7 @@
                 <div class="mb-3">
                     <label for="tempat_lahir" class="form-label">Tempat Lahir</label>
                     <input value="{{ old('tempat_lahir', Auth::user()->tempat_lahir) }}" type="tempat_lahir"
-                        class="form-control" name="tempat_lahir" id="tempat_lahir" placeholder="tempat_lahir">
+                        class="form-control" name="tempat_lahir" id="tempat_lahir" placeholder="Tempat Lahir">
                     @error('tempat_lahir')
                         <div class="text-danger">
                             {{ $message }}

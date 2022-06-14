@@ -160,7 +160,7 @@
                     </div>
                 </li>
                 <li class="mb-1 list-group-item">
-                    <a href="/dashboard/admin/penerima" class="btn mt-2 btn-secondary text-white">Kembali</a>
+                    <a href="/dashboard/admin/arsip" class="btn mt-2 btn-secondary text-white">Kembali</a>
                 </li>
             </ul>
         </div>
