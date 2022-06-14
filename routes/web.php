@@ -54,6 +54,8 @@ Route::get("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::clas
 Route::delete("/dashboard/admin/laporan/{laporan:slug}", [DashboardController::class, 'destroy'])->middleware("admin");
 Route::get("/dashboard/admin/penerima", [DashboardController::class, 'penerimaRoleAdmin'])->middleware("admin");
 Route::get("/dashboard/admin/penerima/detail/{penerima:id}", [DashboardController::class, 'penerimaRoleAdminDetail'])->middleware("admin");
+Route::get("/dashboard/admin/arsip", [DashboardController::class, 'arsip'])->middleware("admin");
+Route::get("/dashboard/admin/arsip/detail/{penerima:id}", [DashboardController::class, 'detailArsip'])->middleware("admin");
 Route::resource("/dashboard/admin/informasi", DashboardInfoController::class)->middleware("admin");
 
 // desa

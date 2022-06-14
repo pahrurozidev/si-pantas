@@ -125,7 +125,7 @@
                         <i class="bi bi-flag"></i> <span class="ms-1">Semua Laporan</span> </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/dashboard/admin/arsip">
                         <i class="bi bi-archive"></i> <span class="ms-1">Arsip</span> </a>
                 </li>
             </ul>

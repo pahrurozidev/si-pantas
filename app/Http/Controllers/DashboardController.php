@@ -176,4 +176,18 @@ class DashboardController extends Controller
             "penerima" => $penerima
         ]);
     }
+
+    public function arsip()
+    {
+        return view("dashboard.admin.arsip", [
+            "dataPenerima" => Penerima::where('status_desa', '=', 'verifikasi')->where('status_warga', '=', 'verifikasi')->get()
+        ]);
+    }
+
+    public function detailArsip(Penerima $penerima)
+    {
+        return view("dashboard.admin.detailArsip", [
+            "penerima" => $penerima
+        ]);
+    }
 }
