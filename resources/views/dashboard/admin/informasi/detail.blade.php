@@ -99,8 +99,8 @@
             </ul>
             <div class="aksi d-flex justify-content-end mt-5">
                 <a href="/dashboard/admin/informasi" class="btn btn-warning text-white">Kembali</a>
-                <a href="/dashboard/admin/informasi/{{ $informasi->slug }}/edit" class="btn btn-primary ms-2">Edit</a>
-                <form action="/dashboard/admin/informasi/{{ $informasi->slug }}" method="POST">
+                <a href="/dashboard/admin/informasi/{{ $informasi->id }}/edit" class="btn btn-primary ms-2">Edit</a>
+                <form action="/dashboard/admin/informasi/{{ $informasi->id }}" method="POST">
                     @method('delete')
                     @csrf
                     <button class="btn fs-6 btn-danger ms-2" onclick="return confirm('Apakah anda yakin?')">Hapus</button>

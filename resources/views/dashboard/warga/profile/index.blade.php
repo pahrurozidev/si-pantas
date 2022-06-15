@@ -13,7 +13,7 @@
             </div>
         @endif
         <div class="col-lg-8 m-auto shadow p-4 list-group list-group-flush">
-            <div class="aksi d-flex justify-content-end">
+            <div class="aksi d-flex justify-content-end mb-4">
                 <a href="{{ route('profile.edit') }}" class="btn btn-primary ms-2">Edit</a>
             </div>
             <div class="card-style mb-4 list-group-item">
@@ -43,7 +43,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>Tempat Lahir</h5>
                 @if (Auth::user()->tempat_lahir === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->tempat_lahir }}</small>
                 @endif
@@ -51,7 +51,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>Provinsi</h5>
                 @if (Auth::user()->provinsi === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->provinsi }}</small>
                 @endif
@@ -59,7 +59,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>Kabupaten / Kota</h5>
                 @if (Auth::user()->kabupaten === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->kabupaten }}</small>
                 @endif
@@ -67,7 +67,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>Kecamatan</h5>
                 @if (Auth::user()->kecamatan === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->kecamatan }}</small>
                 @endif
@@ -75,7 +75,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>Desa / Kelurahan</h5>
                 @if (Auth::user()->desa === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->desa }}</small>
                 @endif
@@ -83,7 +83,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>RT / RW</h5>
                 @if (Auth::user()->rt_rw === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->rt_rw }}</small>
                 @endif
@@ -91,7 +91,7 @@
             <div class="card-style mb-4 list-group-item">
                 <h5>Kode Pos</h5>
                 @if (Auth::user()->kode_pos === null)
-                    <em class="text-danger h6">-- Data Belum Dilengkapi --</em>
+                    <em class="text-danger" style="font-style: italic;">-- Data Belum Dilengkapi --</em>
                 @else
                     <small class="text-muted h6">{{ Auth::user()->kode_pos }}</small>
                 @endif

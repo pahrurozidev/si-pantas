@@ -7,7 +7,7 @@
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Ubah Bantuan Sosial</h1>
             </div>
-            <form action="/dashboard/admin/informasi/{{ $informasi->slug }}" method="POST">
+            <form action="/dashboard/admin/informasi/{{ $informasi->id }}" method="POST">
                 @method('put')
                 @csrf
                 {{-- nama bantuan --}}
@@ -163,7 +163,7 @@
                         </div>
                     @enderror
                 </div>
-                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary">Ubah</button>
             </form>
         </div>
     </main>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -12,18 +11,12 @@ class ProfileController extends Controller
 {
   public function index()
   {
-    return view("dashboard.profile.index");
+    return view("dashboard.warga.profile.index");
   }
 
-  public function edit(User $user)
+  public function edit()
   {
-    $response = Http::get('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
-    $data = $response->json();
-
-    return view("dashboard.profile.edit", [
-      "user" => $user,
-      "dataProvinsi" => $data["value"],
-    ]);
+    return view("dashboard.warga.profile.edit");
   }
 
   public function update(Request $request)
@@ -49,7 +42,7 @@ class ProfileController extends Controller
     $validatedData["kecamatan"] = substr($validatedData["kecamatan"], 6);
     $validatedData["desa"] = substr($validatedData["desa"], 10);
 
-    Auth::user()->update($validatedData);
-    return redirect('/profile/index')->with('successUpdate', 'Data anda telah berhasil diperbarui');
+    User::where('id', auth()->user()->id)->update($validatedData);
+    return redirect('dashboard/warga/profile/index')->with('successUpdate', 'Data anda telah berhasil diperbarui');
   }
 }

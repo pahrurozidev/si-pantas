@@ -19,7 +19,7 @@
                     </div>
                 @endif
                 @if (count($penerima) === 0)
-                    <p class="text-muted mt-4 text-center" style="font-style: italic;">bantuan masih kosong!</p>
+                    <p class="text-muted mt-4 text-center" style="font-style: italic;">Bantuan belum ada!</p>
                 @else
                     <table class="table-bordered mt-3">
                         <thead class="bg-secondary text-white">
@@ -27,7 +27,9 @@
                                 <th scope="col" class="text-center">Penerima</th>
                                 <th scope="col" class="text-center">Jenis Bantuan</th>
                                 <th scope="col" class="text-center">Desa</th>
-                                <th scope="col" class="text-center">Verifikasi</th>
+                                @if ($penerima[0]->status_desa === 'verifikasi')
+                                    <th scope="col" class="text-center">Verifikasi</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -41,21 +43,23 @@
                                 </td>
                                 <td class="p-2 text-center col-lg-4">{{ $penerima[0]->jenis_bantuan }}</td>
                                 <td class="p-2 text-center col-lg-4">{{ $penerima[0]->desa }}</td>
-                                @if ($penerima[0]->status_warga == 'verifikasi')
-                                    <td class="py-2 px-5 text-center col-lg-4"><span
-                                            class="badge bg-primary">Terverifikasi</span>
-                                    </td>
-                                @else
-                                    <td class="py-2 px-5 text-center col-lg-4">
-                                        <form action="/dashboard/warga/bantuan/{{ $penerima[0]->id }}" method="POST">
-                                            @method('put')
-                                            @csrf
-                                            <input type="hidden" name="status_warga" value="verifikasi">
-                                            <button class="btn btn-primary"
-                                                onclick="return confirm('Apakah anda yakin?')"><i
-                                                    class="bi bi-check"></i></button>
-                                        </form>
-                                    </td>
+                                @if ($penerima[0]->status_desa === 'verifikasi')
+                                    @if ($penerima[0]->status_warga == 'verifikasi')
+                                        <td class="py-2 px-5 text-center col-lg-4"><span
+                                                class="badge bg-primary">Terverifikasi</span>
+                                        </td>
+                                    @else
+                                        <td class="py-2 px-5 text-center col-lg-4">
+                                            <form action="/dashboard/warga/bantuan/{{ $penerima[0]->id }}" method="POST">
+                                                @method('put')
+                                                @csrf
+                                                <input type="hidden" name="status_warga" value="verifikasi">
+                                                <button class="btn btn-primary"
+                                                    onclick="return confirm('Apakah anda yakin?')"><i
+                                                        class="bi bi-check"></i></button>
+                                            </form>
+                                        </td>
+                                    @endif
                                 @endif
                             </tr>
                     </table>

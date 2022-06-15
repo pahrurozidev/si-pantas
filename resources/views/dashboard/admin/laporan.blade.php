@@ -6,7 +6,8 @@
             <div
                 class="d-flex text-center justify-content-between flex-column flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Semua Laporan Warga</h1>
-                <p class="col-lg-8 fs-5 m-auto">Periksa semua laporan untuk memantau trasparansi bantuan sosial yang tersalurkan</p>
+                <p class="col-lg-8 m-auto">Periksa semua laporan untuk memantau trasparansi bantuan sosial yang tersalurkan
+                </p>
             </div>
             <div class="col-lg-8 m-auto">
                 {{-- laporan berhasil dihapus --}}

@@ -32,12 +32,8 @@ class DashboardInfoController extends Controller
      */
     public function create()
     {
-        $response = Http::get('https://api.binderbyte.com/wilayah/provinsi?api_key=c21f5d686f436e800025b6154f433108667c89cd2bd8e84e852ddd5f808e7e31');
-        $data = $response->json();
-
         return view("dashboard.admin.informasi.create", [
             "jenisBantuan" => JenisBantuan::all(),
-            "dataProvinsi" => $data["value"],
         ]);
     }
 

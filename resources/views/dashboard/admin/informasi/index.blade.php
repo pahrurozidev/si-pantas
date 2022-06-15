@@ -49,7 +49,7 @@
                                     <td scope="row" class="text-center">{{ $loop->iteration }}</td>
                                     <td class="p-2 col-lg-9">
                                         {{ $info->judul_informasi }}
-                                        <a href="/dashboard/admin/informasi/{{ $info->slug }}"
+                                        <a href="/dashboard/admin/informasi/{{ $info->id }}"
                                             class="ms-1 badge bg-primary edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>

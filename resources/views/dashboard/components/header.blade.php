@@ -4,12 +4,12 @@
         data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-nav border-start">
+    <div class="navbar-nav">
         <div class="nav-item text-nowrap">
             <form action="/logout" method="POST" class="d-inline-block nav-link px-3 text-dark">
                 @csrf
-                <button type="submit" class="dropdown-item keluar"><i class="bi bi-box-arrow-right"></i><span
-                        class="ms-2">Keluar</span></button>
+                <button type="submit" class="dropdown-item keluar">
+                    <i class="bi bi-box-arrow-right"></i><span class="ms-2">Keluar</span></button>
             </form>
         </div>
     </div>
@@ -27,8 +27,8 @@
             </div>
             @if (auth()->user()->is_warga)
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('profile/index') ? 'active' : '' }}"
-                        href="{{ route('profile.index') }}">
+                    <a class="nav-link {{ Request::is('dashboard/warga/profile/index') ? 'active' : '' }}"
+                        href="{{ route('dashboard.warga.profile.index') }}">
                         <i class="bi bi-clipboard-data"></i> <span class="ms-1">Profile</span> </a>
                 </li>
             @endif
@@ -90,11 +90,10 @@
                         <i class="bi bi-clock-history"></i> <span class="ms-1">History</span> </a>
                 </li>
             @endcan
-
             {{-- admin --}}
             @can('admin')
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('dashboard/admin/informasi') ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::is('dashboard/admin/informasi') || Request::is('dashboard/admin/informasi/create') ? 'active' : '' }}"
                         href="/dashboard/admin/informasi">
                         <i class="bi bi-clipboard-data"></i> <span class="ms-1">Informasi</span> </a>
                 </li>
@@ -125,7 +124,8 @@
                         <i class="bi bi-flag"></i> <span class="ms-1">Semua Laporan</span> </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/dashboard/admin/arsip">
+                    <a class="nav-link {{ Request::is('dashboard/admin/arsip') ? 'active' : '' }}"
+                        href="/dashboard/admin/arsip">
                         <i class="bi bi-archive"></i> <span class="ms-1">Arsip</span> </a>
                 </li>
             </ul>

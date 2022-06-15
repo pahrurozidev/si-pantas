@@ -17,6 +17,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
+            {{-- laporan gagal dikirim --}}
+            @if (session()->has('faild'))
+                <div class="col-lg-10 m-auto alert alert-warning alert-dismissible fade show mt-3 mb-3" role="alert">
+                    {{ session('faild') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <form action="/dashboard/warga/laporan" method="POST" class="col-lg-10 shadow m-auto p-5">
                 @csrf
                 {{-- question 1 --}}
@@ -138,4 +145,16 @@
             </form>
         </div>
     </main>
+
+    <script>
+        const bentukBantuan = document.querySelector("#bentuk_bantuan");
+        const jumlahBantuanLaporan = document.querySelector(".jumlah_bantuan_laporan");
+        bentukBantuan.addEventListener("change", () => {
+            if (bentukBantuan.value === "Tunai") {
+                jumlahBantuanLaporan.style.display = "block";
+            } else {
+                jumlahBantuanLaporan.style.display = "none";
+            }
+        });
+    </script>
 @endsection

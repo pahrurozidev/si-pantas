@@ -34,8 +34,8 @@
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 @if (auth()->user()->is_warga)
-                                    <li><a class="dropdown-item" href="/profile/index"><i class="bi bi-laptop"></i><span
-                                                class="ms-2">Dashboard</span></a>
+                                    <li><a class="dropdown-item" href="dashboard/warga/profile/index"><i
+                                                class="bi bi-laptop"></i><span class="ms-2">Dashboard</span></a>
                                     </li>
                                 @elseif(auth()->user()->is_desa)
                                     <li><a class="dropdown-item" href="/dashboard/desa/penerima"><i

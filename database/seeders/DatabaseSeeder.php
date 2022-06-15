@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'tgl_lahir' => 20001212,
             'tempat_lahir' => 'Bagek gaet',
             'jmlh_bantuan' => 1200000,
-            'jenis_bantuan' => 'Penerima Bantuan Ha (PKH)',
+            'jenis_bantuan' => 'Program Keluarga Harapan (PKH)',
             'provinsi' => 'Nusa Tenggara Barat',
             'kabupaten' => 'Lombok Timur',
             'kecamatan' => 'Pringgabaya',
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
 
         Penerima::create([
             'nama' => 'Pahrurozi',
-            'nik' => '232380928093',
+            'nik' => '5203080107001524',
             'telepon' => '085338043144',
             'email' => 'pahrurozi17@gmail.com',
             'tgl_lahir' => 20000701,

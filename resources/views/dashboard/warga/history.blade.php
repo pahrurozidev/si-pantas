@@ -8,8 +8,10 @@
             <p class="my-2 col-lg-8 m-auto">Dapatkan informasi bantuan sosial yang telah anda diterima</p>
         </div>
         <div class="col-lg-12">
-            {{-- bantuan terverifikasi --}}
-            @if ($penerima[0]->status_warga == 'verifikasi')
+            @if ($penerima->count() == 0 || $penerima[0]->status_warga == !'verifikasi')
+                <p class="text-muted mt-4 text-center" style="font-style: italic;">Riwayat bantuan masih kosong!</p>
+            @else
+                {{-- bantuan terverifikasi --}}
                 <table class="table-bordered col-lg-12 mt-3">
                     <thead class="bg-secondary text-white">
                         <tr>
@@ -30,11 +32,9 @@
                             </td>
                             <td class="text-center p-2">{{ $penerima[0]->jenis_bantuan }}</td>
                             <td class="text-center p-2">{{ $penerima[0]->desa }}</td>
-                            <td class="text-center p-2">{{ substr($penerima[0]->created_at, 0, 10) }}</td>
+                            <td class="text-center p-2">{{ $penerima[0]->created_at->format('d/m/y') }}</td>
                         </tr>
                 </table>
-            @else
-                <p class="text-muted mt-4 text-center" style="font-style: italic;">Riwayat bantuan masih kosong!</p>
             @endif
         </div>
     </main>
