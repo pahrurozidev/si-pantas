@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Informasi;
 use App\Models\JenisBantuan;
 use Illuminate\Http\Request;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Response;
 
@@ -21,7 +20,7 @@ class DashboardInfoController extends Controller
         // $pen = Informasi::all();
         // dd($pen);
         return view("dashboard.admin.informasi.index", [
-            "informasi" => Informasi::all(),
+            "informasi" => Informasi::latest()->get(),
         ]);
     }
 
@@ -62,7 +61,6 @@ class DashboardInfoController extends Controller
         $validatedData["kabupaten"] = substr($validatedData["kabupaten"], 4);
         $validatedData["kecamatan"] = substr($validatedData["kecamatan"], 6);
         $validatedData["desa"] = substr($validatedData["desa"], 10);
-        $validatedData["slug"] = strtoupper(substr(md5(time()), 0, 5));
 
         Informasi::create($validatedData);
         return redirect("/dashboard/admin/informasi")->with("success", "Bantuan berhasil ditambahkan");
@@ -122,7 +120,6 @@ class DashboardInfoController extends Controller
         $validatedData["kabupaten"] = substr($validatedData["kabupaten"], 4);
         $validatedData["kecamatan"] = substr($validatedData["kecamatan"], 6);
         $validatedData["desa"] = substr($validatedData["desa"], 10);
-        $validatedData["slug"] = $informasi->slug;
 
         Informasi::where("id", $informasi->id)->update($validatedData);
         return redirect("/dashboard/admin/informasi")->with("successUpdate", "Bantuan berhasil diperbaharui");

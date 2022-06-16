@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('kabupaten')->nullable();
             $table->string('kecamatan')->nullable();
             $table->string('desa')->nullable();
-            $table->string('telepon')->unique();
+            $table->string('telepon');
             $table->string('jmlh_bantuan')->nullable();
             $table->string('rt_rw')->nullable();
             $table->string('kode_pos')->nullable();

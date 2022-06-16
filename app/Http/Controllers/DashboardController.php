@@ -101,7 +101,6 @@ class DashboardController extends Controller
             $validatedData["jumlah2"] = $request->jumlah2;
         }
 
-        $validatedData["slug"] = strtoupper(substr(md5(time()), 0, 5));
         $validatedData["deskripsi"] = $request->deskripsi;
         $validatedData["nama"] = auth()->user()->nama;
         $validatedData["nik"] = auth()->user()->nik;

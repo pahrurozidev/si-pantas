@@ -24,9 +24,9 @@
                         <div class="d-flex align-items-center justify-content-between border rounded p-3 mb-2">
                             <h3 class="h5">{{ $laporan->nama }}</h3>
                             <div class="d-flex">
-                                <a href="/dashboard/admin/laporan/{{ $laporan->slug }}" class="badge bg-primary detail"><i
+                                <a href="/dashboard/admin/laporan/{{ $laporan->id }}" class="badge bg-primary detail"><i
                                         class="bi bi-eye h6"></i></a>
-                                <form action="/dashboard/admin/laporan/{{ $laporan->slug }}" method="post"
+                                <form action="/dashboard/admin/laporan/{{ $laporan->id }}" method="post"
                                     class="ms-2">
                                     @method('delete')
                                     @csrf

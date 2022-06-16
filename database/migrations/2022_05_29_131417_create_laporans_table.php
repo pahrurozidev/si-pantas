@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id();
-            $table->string('slug')->unique();
             $table->string('question1');
             $table->string('question2');
             $table->string('jenis_bantuan');

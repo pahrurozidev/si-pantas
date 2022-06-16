@@ -35,7 +35,7 @@
                                 style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5 class="fs-3" style="line-height: 40px">
-                                    <a href="/informasi/{{ $informasi[0]->slug }}"
+                                    <a href="/informasi/{{ $informasi[0]->id }}"
                                         class="text-decoration-none text-white">{{ $informasi[0]->judul_informasi }}</a>
                                 </h5>
                                 <p style="font-size: 20px;">{{ substr($informasi[0]->deskripsi, 0, 300) }}...</p>
@@ -46,7 +46,7 @@
                                 style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5 class="fs-3" style="line-height: 40px">
-                                    <a href="/informasi/{{ $informasi[1]->slug }}"
+                                    <a href="/informasi/{{ $informasi[1]->id }}"
                                         class="text-decoration-none text-white">{{ $informasi[1]->judul_informasi }}</a>
                                 </h5>
                                 <p style="font-size: 20px;">{{ substr($informasi[1]->deskripsi, 0, 300) }}...</p>
@@ -99,7 +99,7 @@
                 tingkat
                 transparansi dan integritas dengan memantau setiap proses penyaluran bantuan sosial</p>
             @if (count($informasi) === 0)
-                <h5 class="text-muted text-center mt-5">Informasi bantuan belum ada!</h5>
+                <p class="text-muted text-center mt-5" style="font-style: italic;">Informasi bantuan belum ada!</p>
             @else
                 <div class="articles mt-5">
                     <div class="card shadow card-main">
@@ -111,7 +111,7 @@
                                 {{ $informasi[0]->created_at->diffForHumans() }}</small>
                             <p class="card-text" style="line-height: 30px">
                                 {{ substr($informasi[0]->deskripsi, 0, 500) }}....</p>
-                            <a href="/informasi/{{ $informasi[0]->slug }}" class="btn btn-primary btn-main">Lihat
+                            <a href="/informasi/{{ $informasi[0]->id }}" class="btn btn-primary btn-main">Lihat
                                 selengkapnya</a>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                                 <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
                                     {{ $info->created_at->diffForHumans() }}</small>
                                 <p class="card-text">{{ substr($info->deskripsi, 0, 120) }}...</p>
-                                <a href="/informasi/{{ $info->slug }}" class="btn btn-primary">Lihat selengkapnya</a>
+                                <a href="/informasi/{{ $info->id }}" class="btn btn-primary">Lihat selengkapnya</a>
                             </div>
                         </div>
                     @endforeach

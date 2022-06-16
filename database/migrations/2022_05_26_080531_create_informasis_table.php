@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId("jenisBantuan_id");
             $table->string("judul_informasi");
-            $table->string("slug")->unique();
             $table->string("jmlh_bantuan");
             $table->string("target_penerima"); //
             $table->string("bantuan_perorang"); //
