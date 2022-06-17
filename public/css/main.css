@@ -72,16 +72,7 @@ div.feature {
 /* bantuan sosial */
 .articles {
     display: grid;
-    gap: 20px;
-}
-
-.card-body {
-    position: relative;
-}
-
-.btn-main {
-    position: absolute;
-    bottom: 16px;
+    gap: 10px;
 }
 
 /* footer */
@@ -231,28 +222,21 @@ trix-toolbar [data-trix-button-group="file-tools"] {
 
 @media screen and (min-width: 600px) {
 
-    /* fitur kami */
-    div.feature {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .feature img {
         width: 200px;
-    }
-
-    /* bantuan sosial */
-    .articles {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card-main {
-        grid-column-start: 1;
-        grid-column-end: 3;
     }
 
     /* footer */
     .social-media {
         width: 400px !important;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    /* bantuan sosial */
+    .articles {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -298,6 +282,19 @@ trix-toolbar [data-trix-button-group="file-tools"] {
 
     .list-group.ms-2 {
         margin: 15px 0 0 !important;
+    }
+
+    /* bantuan sosial */
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* bantuan sosial */
+    .articles {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

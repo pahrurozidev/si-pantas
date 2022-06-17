@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string("kabupaten");
             $table->string("kecamatan");
             $table->string("desa");
+            $table->text('excerpt');
             $table->text("deskripsi");
             $table->timestamp("published_at")->nullable();
             $table->timestamps();

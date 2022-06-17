@@ -57,6 +57,10 @@ class DashboardInfoController extends Controller
             "deskripsi" => "required|min:20",
         ]);
 
+        $str = substr($validatedData["deskripsi"], 0, 300);
+        $getExcerpt = strip_tags('<div>' . $str . ' </div>');
+        $validatedData["excerpt"] = $getExcerpt;
+
         $validatedData["provinsi"] = substr($validatedData["provinsi"], 2);
         $validatedData["kabupaten"] = substr($validatedData["kabupaten"], 4);
         $validatedData["kecamatan"] = substr($validatedData["kecamatan"], 6);
@@ -115,6 +119,10 @@ class DashboardInfoController extends Controller
             "desa" => "required",
             "deskripsi" => "required|min:20",
         ]);
+
+        $str = substr($validatedData["deskripsi"], 0, 300);
+        $getExcerpt = strip_tags('<div>' . $str . ' </div>');
+        $validatedData["excerpt"] = $getExcerpt;
 
         $validatedData["provinsi"] = substr($validatedData["provinsi"], 2);
         $validatedData["kabupaten"] = substr($validatedData["kabupaten"], 4);
