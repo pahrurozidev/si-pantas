@@ -7,7 +7,7 @@
             <h1 class="h2">Arsip Bantuan</h1>
             <p class="my-2 col-lg-8 m-auto">Dapatkan informasi bantuan sosial yang telah tersalurkan</p>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="overflow: auto;">
             {{-- bantuan terverifikasi --}}
             @if ($dataPenerima->count())
                 <table class="table-bordered mt-3">

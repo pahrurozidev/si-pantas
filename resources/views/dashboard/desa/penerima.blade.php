@@ -8,7 +8,7 @@
             <p class="col-lg-8 m-auto">Silahkan lakukan Verifikasi dengan memberikan centang pada kolom Verifikasi Desa bila
                 pihak desa telah menyalurkan Bantuan Sosial kepada Warga</p>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="overflow: auto;">
             {{-- bantuan terverifikasi --}}
             @if (session()->has('successUpdate'))
                 <div class="alert alert-success alert-dismissible fade show mt-3 mb-0" role="alert">

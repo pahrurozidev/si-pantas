@@ -41,7 +41,7 @@
                             <div class="carousel-caption d-md-block">
                                 <h5 class="fs-3" style="line-height: 40px">
                                     <a href="/informasi/{{ $informasi[0]->id }}"
-                                        class="text-decoration-none text-white welcome">{{ $informasi[0]->judul_informasi }}</a>
+                                        class="text-decoration-none text-white welcome">{{ substr($informasi[0]->judul_informasi, 0, 60) }}...</a>
                                 </h5>
                                 <p class="welcome-body" style="font-size: 20px;">{{ $informasi[0]->excerpt }}...</p>
                             </div>
@@ -54,7 +54,7 @@
                                 <div class="carousel-caption d-md-block">
                                     <h5 class="fs-3" style="line-height: 40px">
                                         <a href="/informasi/{{ $informasi[1]->id }}"
-                                            class="text-decoration-none text-white welcome">{{ $informasi[1]->judul_informasi }}</a>
+                                            class="text-decoration-none text-white welcome">{{ substr($informasi[1]->judul_informasi, 0, 60) }}...</a>
                                     </h5>
                                     <p class="welcome-body" style="font-size: 20px;">{{ $informasi[1]->excerpt }}...</p>
                                 </div>
@@ -68,13 +68,11 @@
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    @if (count($informasi) > 1)
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    @endif
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 @endif
             </div>
         </section>

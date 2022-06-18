@@ -19,7 +19,6 @@ class InformasiFactory extends Factory
         return [
             "jenisBantuan_id" => mt_rand(1, 5),
             "judul_informasi" => $this->faker->sentence(mt_rand(10, 15)),
-            "slug" => $this->faker->slug(2),
             'target_penerima' => mt_rand(30, 40),
             'bantuan_perorang' => mt_rand(300000, 400000),
             "jmlh_bantuan" => $this->faker->randomNumber(5, true),
@@ -27,6 +26,7 @@ class InformasiFactory extends Factory
             "kabupaten" => $this->faker->randomElement(['Lombok Timur', 'Lombok Utara', 'Lombok Tengah', 'Lombok Barat', 'Sumbawa Barat']),
             "Kecamatan" => $this->faker->randomElement(['Pringgaya', 'Pringgarata', 'Pringgasela', 'Masbagik', 'Aikmel']),
             "desa" => $this->faker->randomElement(['Pohgading', 'Pohgading Timur', 'Kerumut', 'Pringgabaya', 'Batuyang']),
+            "excerpt" => $this->faker->sentence(mt_rand(35, 45)),
             "deskripsi" => $this->faker->sentence(mt_rand(50, 60))
         ];
     }

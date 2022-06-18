@@ -5,7 +5,7 @@
         <div class="pt-3 pb-2 mb-3 text-center border-bottom">
             <h1 class="h2">Detail Penerima: {{ $penerima->nama }}</h1>
         </div>
-        <div class="col-lg-8 m-auto shadow p-4">
+        <div class="col-lg-8 m-auto shadow p-4 detail-penerima">
             <ul class="list-group list-group-flush">
                 <li class="mb-1 list-group-item">
                     <div class="d-flex">

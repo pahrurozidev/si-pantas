@@ -130,10 +130,10 @@
                 </li>
             </ul>
         @endcan
-        <div class="d-flex align-items-center px-3 mt-4 mb-1 keluar">
-            <form action="/logout" method="POST" class="d-inline-block nav-link px-3 text-dark">
+        <div class="nav-item d-flex align-items-center mt-4 keluar">
+            <form action="/logout" method="POST" class="text-dark">
                 @csrf
-                <button type="submit" class="dropdown-item keluar"><i class="bi bi-box-arrow-right"></i><span
+                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i><span
                         class="ms-2">Keluar</span></button>
             </form>
         </div>

@@ -2,20 +2,20 @@
 
 @section('content')
     <section class="col-lg-8 m-auto" style="margin: 100px auto 200px !important">
-        <div class="border-bottom">
-            <h1 class="h2">Detail Bantuan Sosial</h1>
-        </div>
-        <div class="">
+        <div class="info-detail">
+            <div class="border-bottom">
+                <h1 class="h2">Detail Bantuan Sosial</h1>
+            </div>
             {{-- nama bantuan --}}
             <h2 class="h4 mt-4">{{ $informasi->judul_informasi }}</h2>
             <small class="text-muted mb-2 d-block" style="margin-top: -5px !important;">Updated
                 {{ $informasi->created_at->diffForHumans() }}</small>
             {{-- deskripsi --}}
-            <p class="mt-4" style="line-height: 35px">{!! $informasi->deskripsi !!}</p>
+            <p class="" style="line-height: 35px">{!! $informasi->deskripsi !!}</p>
             <ul>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Provinsi</span>
                             <span>:</span>
                         </div>
@@ -24,7 +24,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Kabupaten</span>
                             <span>:</span>
                         </div>
@@ -33,7 +33,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Kecamatan</span>
                             <span>:</span>
                         </div>
@@ -42,7 +42,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Desa</span>
                             <span>:</span>
                         </div>
@@ -51,7 +51,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between jenis_bantuan" style="width: 100px !important;">
                             <span>Jenis Bantuan</span>
                             <span>:</span>
                         </div>
@@ -60,7 +60,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Jumlah Bantuan</span>
                             <span>:</span>
                         </div>
@@ -69,7 +69,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Target penerima</span>
                             <span>:</span>
                         </div>
@@ -78,7 +78,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Jumlah Bantuan Per Orang</span>
                             <span>:</span>
                         </div>
@@ -87,7 +87,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 150px !important">
                             <span>Penerima</span>
                             <span>:</span>
                         </div>

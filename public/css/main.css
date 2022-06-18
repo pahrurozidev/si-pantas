@@ -288,6 +288,11 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     .articles {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .info-detail {
+        margin: 0 auto;
+        width: 80% !important;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -325,12 +330,15 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     #tentang,
     .login,
     .register,
-    .contact {
+    .contact,
+    .profile,
+    .laporan,
+    .detail-penerima {
         padding: 40px !important;
     }
 
     /* dashboard */
-    .dashboard .keluar {
+    .navbar-nav .keluar {
         display: none;
     }
 
@@ -343,12 +351,22 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .info-detail {
+        margin: 0 auto;
+        width: 90% !important;
+    }
+}
+
 @media screen and (max-width: 480px) {
 
     #tentang,
     .login,
     .register,
-    .contact {
+    .contact,
+    .profile,
+    .laporan,
+    .detail-penerima {
         padding: 20px !important;
     }
 

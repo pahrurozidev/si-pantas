@@ -16,7 +16,7 @@
             <ul>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Provinsi</span>
                             <span>:</span>
                         </div>
@@ -25,7 +25,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Kabupaten</span>
                             <span>:</span>
                         </div>
@@ -34,7 +34,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Kecamatan</span>
                             <span>:</span>
                         </div>
@@ -43,7 +43,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Desa</span>
                             <span>:</span>
                         </div>
@@ -52,7 +52,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Jenis Bantuan</span>
                             <span>:</span>
                         </div>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Jumlah Bantuan</span>
                             <span>:</span>
                         </div>
@@ -70,7 +70,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Target penerima</span>
                             <span>:</span>
                         </div>
@@ -79,7 +79,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Jumlah Bantuan Per Orang</span>
                             <span>:</span>
                         </div>
@@ -88,7 +88,7 @@
                 </li>
                 <li class="mb-3">
                     <div class="d-flex">
-                        <div class="d-flex justify-content-between" style="width: 200px !important">
+                        <div class="d-flex justify-content-between" style="width: 100px !important">
                             <span>Penerima</span>
                             <span>:</span>
                         </div>

@@ -8,7 +8,7 @@
             <p class="col-lg-8 m-auto">Daftar dibawah ini merupakan data warga yang telah menerima dana bantuan sosial. Tetap
                 pantau setiap penyaluran pada halaman ini untuk memastikan tingkat transparansi bantuan sosial</p>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="overflow: auto;">
             {{-- bantuan terverifikasi --}}
             @if (session()->has('successUpdate'))
                 <div class="alert alert-success alert-dismissible fade show mt-3 mb-0" role="alert">

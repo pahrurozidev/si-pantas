@@ -24,7 +24,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <form action="/dashboard/warga/laporan" method="POST" class="col-lg-10 shadow m-auto p-5">
+            <form action="/dashboard/warga/laporan" method="POST" class="col-lg-10 shadow m-auto p-5 laporan">
                 @csrf
                 {{-- question 1 --}}
                 <p class="text-danger" style="font-style: italic;">Data anda otomatis akan direcord oleh sistem*</p>

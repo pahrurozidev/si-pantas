@@ -48,12 +48,11 @@ class DatabaseSeeder extends Seeder
             'is_warga' => false,
         ]);
 
-
         // informasi
-        // Informasi::factory(3)->create();
+        Informasi::factory(3)->create();
 
         // penerima
-        // Penerima::factory(30)->create();
+        Penerima::factory(30)->create();
         Penerima::create([
             'nama' => 'Pahrurozi',
             'nik' => '5203080107001524',

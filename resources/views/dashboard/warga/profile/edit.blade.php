@@ -7,13 +7,13 @@
                 class="d-flex justify-content-between text-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2 text-center m-auto mb-3">Edit Profile</h1>
             </div>
-            <form action="{{ route('profile.update') }}" method="post" class="col-lg-8 p-5 shadow m-auto">
+            <form action="{{ route('profile.update') }}" method="post" class="col-lg-8 p-5 shadow m-auto profile">
                 @method('put')
                 @csrf
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama Lengkap</label>
-                    <input value="{{ old('nama', Auth::user()->nama) }}" type="text" class="form-control" name="nama"
-                        id="nama" placeholder="nama">
+                    <input value="{{ old('nama', Auth::user()->nama) }}" type="text" class="form-control"
+                        name="nama" id="nama" placeholder="nama">
                     @error('nama')
                         <div class="text-danger">
                             {{ $message }}
@@ -87,13 +87,6 @@
                         <label class="input-group-text" for="provinsi">Pilihan</label>
                         <select class="form-select" name="provinsi" id="provinsi">
                             <option selected>Pilih Provinsi</option>
-                            {{-- <option
-                                value="{{ Auth::user()->provinsi }} {{ ucwords(strtolower(Auth::user()->provinsi)) }}"
-                                selected>{{ ucwords(strtolower(Auth::user()->provinsi)) }}</option>
-                            @foreach ($dataProvinsi as $provinsi)
-                                <option value="{{ $provinsi['id'] }} {{ ucwords(strtolower($provinsi['name'])) }}">
-                                    {{ ucwords(strtolower($provinsi['name'])) }}</option>
-                            @endforeach --}}
                         </select>
                         @error('provinsi')
                             <div class="text-danger">

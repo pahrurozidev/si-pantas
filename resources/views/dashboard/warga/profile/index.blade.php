@@ -12,7 +12,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <div class="col-lg-8 m-auto shadow p-4 list-group list-group-flush">
+        <div class="col-lg-8 m-auto shadow p-4 list-group list-group-flush profile">
             <div class="aksi d-flex justify-content-end mb-4">
                 <a href="{{ route('profile.edit') }}" class="btn btn-primary ms-2">Edit</a>
             </div>
