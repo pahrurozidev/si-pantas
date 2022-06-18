@@ -19,7 +19,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <form action="/login" method="POST" class="shadow rounded p-5">
+                <form action="/login" method="POST" class="shadow rounded p-5 login">
                     @csrf
                     <h1 class="h3 fw-normal text-center">Silakan Masuk</h1>
                     <p class="text-center">Silakan gunakan akun anda untuk memantau dana bantuan sosial</p>

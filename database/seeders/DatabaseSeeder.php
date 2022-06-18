@@ -8,6 +8,7 @@ use App\Models\Penerima;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,12 +21,39 @@ class DatabaseSeeder extends Seeder
     {
         // user
         // User::factory(3)->create();
+        // admin
+        User::create([
+            'nama' => 'Admin',
+            'nik' => '5203080107001523',
+            'telepon' => '085338043143',
+            'email' => 'adminsipantas@gmail.com',
+            'tgl_lahir' => '20000107',
+            'username' => 'adminsipantas',
+            'password' => Hash::make("adminsipantas"),
+            'is_admin' => true,
+            'is_desa' => false,
+            'is_warga' => false,
+        ]);
+        // desa
+        User::create([
+            'nama' => 'Admin',
+            'nik' => '15203080107001522',
+            'telepon' => '085338043144',
+            'email' => 'admindesasipantas@gmail.com',
+            'tgl_lahir' => '20000107',
+            'username' => 'admindesasipantas',
+            'password' => Hash::make("admindesasipantas"),
+            'is_admin' => false,
+            'is_desa' => true,
+            'is_warga' => false,
+        ]);
+
 
         // informasi
         // Informasi::factory(3)->create();
 
         // penerima
-        Penerima::factory(30)->create();
+        // Penerima::factory(30)->create();
         Penerima::create([
             'nama' => 'Pahrurozi',
             'nik' => '5203080107001524',

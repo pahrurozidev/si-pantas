@@ -296,6 +296,15 @@ trix-toolbar [data-trix-button-group="file-tools"] {
     .articles {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .welcome {
+        font-size: 30px !important;
+        line-height: 40px !important;
+    }
+
+    .welcome-body {
+        font-size: 18px !important;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -313,6 +322,13 @@ trix-toolbar [data-trix-button-group="file-tools"] {
         margin-bottom: 20px !important;
     }
 
+    #tentang,
+    .login,
+    .register,
+    .contact {
+        padding: 40px !important;
+    }
+
     /* dashboard */
     .dashboard .keluar {
         display: none;
@@ -324,6 +340,25 @@ trix-toolbar [data-trix-button-group="file-tools"] {
 
     .dashboard nav {
         margin: -150px auto 100px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #tentang,
+    .login,
+    .register,
+    .contact {
+        padding: 20px !important;
+    }
+
+    .welcome {
+        font-size: 25px !important;
+        line-height: 30px !important;
+    }
+
+    .welcome-body {
+        font-size: 15px !important;
     }
 }
 

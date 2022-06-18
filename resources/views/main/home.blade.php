@@ -8,22 +8,27 @@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    @if (count($informasi))
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        @if (count($informasi) > 1)
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        @endif
+                    @endif
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="{{ asset('img/hero2.webp') }}" class="d-block w-100"
                             style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;"
                             alt="..." height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="fs-1" style="line-height: 60px">Selamat Datang, Tingkatkan Integritas dan
+                        <div class="carousel-caption d-md-block">
+                            <h5 class="fs-1 welcome" style="line-height: 60px">Tingkatkan Integritas dan
                                 Transparansi Setiap
                                 Penyaluran
                                 Bantuan Sosial</h5>
-                            <p style="font-size: 20px;">Sipantas atau Sistem Informasi Pelaporan Bantuan Sosial adalah situs
+                            <p class="welcome-body" style="font-size: 20px;">Sipantas atau Sistem Informasi Pelaporan
+                                Bantuan Sosial adalah situs
                                 web yang akan membantu
                                 baik pemerintah maupun penerima bantuan untuk memantau penyaluran bantuan dana sosial yang
                                 efektif dan user-friendly. </p>
@@ -33,12 +38,12 @@
                         <div class="carousel-item">
                             <img src="{{ asset('img/hero4.webp') }}" class="d-block w-100" alt="..." height="500"
                                 style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-block">
                                 <h5 class="fs-3" style="line-height: 40px">
                                     <a href="/informasi/{{ $informasi[0]->id }}"
-                                        class="text-decoration-none text-white">{{ $informasi[0]->judul_informasi }}</a>
+                                        class="text-decoration-none text-white welcome">{{ $informasi[0]->judul_informasi }}</a>
                                 </h5>
-                                <p style="font-size: 20px;">{{ $informasi[0]->excerpt }}...</p>
+                                <p class="welcome-body" style="font-size: 20px;">{{ $informasi[0]->excerpt }}...</p>
                             </div>
                         </div>
                         @if (count($informasi) > 1)
@@ -46,27 +51,31 @@
                                 <img src="{{ asset('img/hero4.webp') }}" class="d-block w-100" alt="..."
                                     height="500"
                                     style="filter: brightness(70%); -webkit-filter: brightness(70%); object-fit: cover;">
-                                <div class="carousel-caption d-none d-md-block">
+                                <div class="carousel-caption d-md-block">
                                     <h5 class="fs-3" style="line-height: 40px">
                                         <a href="/informasi/{{ $informasi[1]->id }}"
-                                            class="text-decoration-none text-white">{{ $informasi[1]->judul_informasi }}</a>
+                                            class="text-decoration-none text-white welcome">{{ $informasi[1]->judul_informasi }}</a>
                                     </h5>
-                                    <p style="font-size: 20px;">{{ $informasi[1]->excerpt }}...</p>
+                                    <p class="welcome-body" style="font-size: 20px;">{{ $informasi[1]->excerpt }}...</p>
                                 </div>
                             </div>
                         @endif
                     @endif
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                @if (count($informasi))
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    @if (count($informasi) > 1)
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    @endif
+                @endif
             </div>
         </section>
 
@@ -152,10 +161,10 @@
         </section>
 
         {{-- info contact --}}
-        <section class="container shadow mt-5 p-5">
+        <section class="container shadow mt-5 p-5 contact">
             <div class="d-flex mb-3">
                 <div class="">
-                    <p class="fs-5" style="text-indent: 80px; line-height: 35px">Sipantas atau Sistem Informasi
+                    <p class="sipantas" style="text-indent: 50px; line-height: 30px">Sipantas atau Sistem Informasi
                         Pelaporan Bantuan Sosial adalah situs web yang akan membantu baik
                         pemerintah maupun penerima bantuan untuk memantau penyaluran bantuan dana sosial yang efektif dan
                         user-friendly. Sipantas berfungsi sebagai wadah dalam pelaporkan setiap kejanggalan dalam penyaluran

@@ -11,7 +11,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <form action="/register" method="POST" class="shadow rounded p-5">
+                <form action="/register" method="POST" class="shadow rounded p-5 register">
                     @csrf
                     <h1 class="h3 fw-normal text-center">Registrasi Sekarang</h1>
                     <p class="text-center">Registrasi sekarang juga guna memantau bantuan sosial yang tersalurkan</p>

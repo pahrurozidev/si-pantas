@@ -11,7 +11,7 @@
     {{-- trix editor --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
     <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
-    <title>Si Pantas - Sistem Informasi Pelaporan Bantuan Sosial</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
