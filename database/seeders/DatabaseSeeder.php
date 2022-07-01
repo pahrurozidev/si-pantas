@@ -49,10 +49,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // informasi
-        Informasi::factory(3)->create();
+        // Informasi::factory(3)->create();
 
         // penerima
-        Penerima::factory(30)->create();
+        // Penerima::factory(30)->create();
         Penerima::create([
             'nama' => 'Pahrurozi',
             'nik' => '5203080107001524',
@@ -68,6 +68,22 @@ class DatabaseSeeder extends Seeder
             'desa' => 'Pohgading Timur',
             'rt_rw' => '01/05',
             'kode_pos' => '83654'
+        ]);
+        Penerima::create([
+            'nama' => 'Muhammad Zakaria',
+            'nik' => '5203080107001521',
+            'telepon' => '085338043143',
+            'email' => 'zakaria@gmail.com',
+            'tgl_lahir' => 20000701,
+            'tempat_lahir' => 'Gerung',
+            'jenis_bantuan' => 'Program Keluarga Harapan (PKH)',
+            'jmlh_bantuan' => 2000000,
+            'provinsi' => 'Nusa Tenggara Barat',
+            'kabupaten' => 'Lombok Barat',
+            'kecamatan' => 'Gerung',
+            'desa' => 'Banyu Urip',
+            'rt_rw' => '01/02',
+            'kode_pos' => '24653'
         ]);
 
         // jenis bantuan
